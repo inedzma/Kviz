@@ -1,0 +1,1178 @@
+[
+    {
+        "Naziv": "Afganistan",
+        "GlavniGrad": "Kabul",
+        "Zastava": "afganistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Albanija",
+        "GlavniGrad": "Tirana",
+        "Zastava": "albanija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Alžir",
+        "GlavniGrad": "Alžir",
+        "Zastava": "alzir_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Andora",
+        "GlavniGrad": "Andorra la Vella",
+        "Zastava": "andora_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Angola",
+        "GlavniGrad": "Luanda",
+        "Zastava": "angola_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Antiga i Barbuda",
+        "GlavniGrad": "Saint John's",
+        "Zastava": "antiga_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Argentina",
+        "GlavniGrad": "Buenos Aires",
+        "Zastava": "argentina_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Armenija",
+        "GlavniGrad": "Jerevan",
+        "Zastava": "armenija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Australija",
+        "GlavniGrad": "Kanbera",
+        "Zastava": "australija_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Austrija",
+        "GlavniGrad": "Beč",
+        "Zastava": "austrija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Azerbejdžan",
+        "GlavniGrad": "Baku",
+        "Zastava": "azerbejdzan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Bahami",
+        "GlavniGrad": "Nasau",
+        "Zastava": "bahami_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Bahrein",
+        "GlavniGrad": "Manama",
+        "Zastava": "bahrein_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Bangladeš",
+        "GlavniGrad": "Daka",
+        "Zastava": "banglades_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Barbados",
+        "GlavniGrad": "Bridgetown",
+        "Zastava": "barbados_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Bjelorusija",
+        "GlavniGrad": "Minsk",
+        "Zastava": "bjelorusija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Belgija",
+        "GlavniGrad": "Brisel",
+        "Zastava": "belgija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Beliz",
+        "GlavniGrad": "Belmopan",
+        "Zastava": "beliz_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Butan",
+        "GlavniGrad": "Thimpu",
+        "Zastava": "butan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Bolivija",
+        "GlavniGrad": "Sucre La Paz",
+        "Zastava": "bolivija_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Bosna i Hercegovina",
+        "GlavniGrad": "Sarajevo",
+        "Zastava": "bosna_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Bocvana",
+        "GlavniGrad": "Gaborone",
+        "Zastava": "bocvana_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Brazil",
+        "GlavniGrad": "Brazilija",
+        "Zastava": "brazil_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Brunei",
+        "GlavniGrad": "Bandar Seri Begawan",
+        "Zastava": "brunei_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Bugarska",
+        "GlavniGrad": "Sofija",
+        "Zastava": "bugarska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Burkina Faso",
+        "GlavniGrad": "Ouagadougou",
+        "Zastava": "burkina_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Burundi",
+        "GlavniGrad": "Gitega",
+        "Zastava": "burundi_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Kabo Verde",
+        "GlavniGrad": "Praia",
+        "Zastava": "kaboverde_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Kambodža",
+        "GlavniGrad": "Phnom Penh",
+        "Zastava": "kambodza_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Kamerun",
+        "GlavniGrad": "Yaounde",
+        "Zastava": "kamerun_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Kanada",
+        "GlavniGrad": "Otava",
+        "Zastava": "kanada_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Centralnoafrička Republika",
+        "GlavniGrad": "Bangui",
+        "Zastava": "car_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Čad",
+        "GlavniGrad": "N'Djamena",
+        "Zastava": "cad_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Čile",
+        "GlavniGrad": "Santiago",
+        "Zastava": "cile_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Kina",
+        "GlavniGrad": "Peking",
+        "Zastava": "kina_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Kolumbija",
+        "GlavniGrad": "Bogota",
+        "Zastava": "kolumbija_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Republika Kongo",
+        "GlavniGrad": "Brazzaville",
+        "Zastava": "kongo_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Kosta Rika",
+        "GlavniGrad": "San Jose",
+        "Zastava": "kostarika_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Obala Slonovače",
+        "GlavniGrad": "Yamoussoukro",
+        "Zastava": "obala_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Hrvatska",
+        "GlavniGrad": "Zagreb",
+        "Zastava": "hrvatska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Kuba",
+        "GlavniGrad": "Havana",
+        "Zastava": "kuba_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Kipar",
+        "GlavniGrad": "Nikosia",
+        "Zastava": "kipar_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Češka",
+        "GlavniGrad": "Prag",
+        "Zastava": "ceska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Danska",
+        "GlavniGrad": "Kopenhagen",
+        "Zastava": "danska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Đibuti",
+        "GlavniGrad": "Đibuti",
+        "Zastava": "djibuti_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Dominika",
+        "GlavniGrad": "Roseau",
+        "Zastava": "dominika_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Dominikanska Republika",
+        "GlavniGrad": "Santo Domingo",
+        "Zastava": "dominikanska_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Ekvador",
+        "GlavniGrad": "Quito",
+        "Zastava": "ekvador_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Egipat",
+        "GlavniGrad": "Kairo",
+        "Zastava": "egipat_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "El Salvador",
+        "GlavniGrad": "San Salvador",
+        "Zastava": "elsalvador_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Ekvatorijalna Gvineja",
+        "GlavniGrad": "Malabo",
+        "Zastava": "egvineja_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Eritreja",
+        "GlavniGrad": "Asmara",
+        "Zastava": "eritreja_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Estonija",
+        "GlavniGrad": "Talin",
+        "Zastava": "estonija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Eswatini",
+        "GlavniGrad": "Mbabane",
+        "Zastava": "esvatini_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Etiopija",
+        "GlavniGrad": "Addis Ababa",
+        "Zastava": "etiopija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Fidži",
+        "GlavniGrad": "Suva",
+        "Zastava": "fidzi_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Finska",
+        "GlavniGrad": "Helsinki",
+        "Zastava": "finska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Francuska",
+        "GlavniGrad": "Pariz",
+        "Zastava": "francuska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Gabon",
+        "GlavniGrad": "Libreville",
+        "Zastava": "gabon_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Gambija",
+        "GlavniGrad": "Banjul",
+        "Zastava": "gambija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Gruzija",
+        "GlavniGrad": "Tbilisi",
+        "Zastava": "gruzija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Njemačka",
+        "GlavniGrad": "Berlin",
+        "Zastava": "njemacka_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Gana",
+        "GlavniGrad": "Accra",
+        "Zastava": "gana_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Grčka",
+        "GlavniGrad": "Atina",
+        "Zastava": "grcka_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Grenada",
+        "GlavniGrad": "Saint George's",
+        "Zastava": "grenada_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Gvatemala",
+        "GlavniGrad": "Guatemala City",
+        "Zastava": "gvatemala_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Gvineja",
+        "GlavniGrad": "Conarky",
+        "Zastava": "gvineja_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Gvineja-Bisau",
+        "GlavniGrad": "Bissau",
+        "Zastava": "gbisau_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Gvajana",
+        "GlavniGrad": "Georgetown",
+        "Zastava": "gvajana_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Haiti",
+        "GlavniGrad": "Port-au-Prince",
+        "Zastava": "haiti_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Honduras",
+        "GlavniGrad": "Tegucigalpa",
+        "Zastava": "honduras_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Madžarska",
+        "GlavniGrad": "Budimpešta",
+        "Zastava": "madzarska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Island",
+        "GlavniGrad": "Rejkjavik",
+        "Zastava": "island_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Indija",
+        "GlavniGrad": "New Delhi",
+        "Zastava": "indija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Indonezija",
+        "GlavniGrad": "Jakarta",
+        "Zastava": "indonezija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Iran",
+        "GlavniGrad": "Teheran",
+        "Zastava": "iran_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Irak",
+        "GlavniGrad": "Bagdad",
+        "Zastava": "irak_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Irska",
+        "GlavniGrad": "Dablin",
+        "Zastava": "irska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Italija",
+        "GlavniGrad": "Rim",
+        "Zastava": "italija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Jamajka",
+        "GlavniGrad": "Kingston",
+        "Zastava": "jamajka_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Japan",
+        "GlavniGrad": "Tokio",
+        "Zastava": "japan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Jordan",
+        "GlavniGrad": "Amman",
+        "Zastava": "jordan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Kazahstan",
+        "GlavniGrad": "Astana",
+        "Zastava": "kazahstan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Kenija",
+        "GlavniGrad": "Nairobi",
+        "Zastava": "kenija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Kiribati",
+        "GlavniGrad": "Tarava",
+        "Zastava": "kiribati_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Kuvajt",
+        "GlavniGrad": "Kuwait City",
+        "Zastava": "kuvajt_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Kosovo",
+        "GlavniGrad": "Priština",
+        "Zastava": "kosovo_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Kirgistan",
+        "GlavniGrad": "Biškek",
+        "Zastava": "kirgistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Laos",
+        "GlavniGrad": "Vientiane",
+        "Zastava": "laos_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Latvija",
+        "GlavniGrad": "Riga",
+        "Zastava": "latvija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Liban",
+        "GlavniGrad": "Beirut",
+        "Zastava": "liban_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Lesoto",
+        "GlavniGrad": "Maseru",
+        "Zastava": "lesoto_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Liberija",
+        "GlavniGrad": "Monrovia",
+        "Zastava": "liberija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Libija",
+        "GlavniGrad": "Tripoli",
+        "Zastava": "libija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Lihtenštajn",
+        "GlavniGrad": "Vaduz",
+        "Zastava": "lihtenstajn_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Litvanija",
+        "GlavniGrad": "Vilnius",
+        "Zastava": "litvanija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Luksemburg",
+        "GlavniGrad": "Luksemburg",
+        "Zastava": "luksemburg_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Madagaskar",
+        "GlavniGrad": "Antananarivo",
+        "Zastava": "madagaskar_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Malavi",
+        "GlavniGrad": "Lilongwe",
+        "Zastava": "malavi_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Malezija",
+        "GlavniGrad": "Kuala Lumpur",
+        "Zastava": "malezija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Maldivi",
+        "GlavniGrad": "Male",
+        "Zastava": "maldivi_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Mali",
+        "GlavniGrad": "Bamako",
+        "Zastava": "mali_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Malta",
+        "GlavniGrad": "Valeta",
+        "Zastava": "malta_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Maršalovi Otoci",
+        "GlavniGrad": "Majuro",
+        "Zastava": "marsalovi_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Mauritanija",
+        "GlavniGrad": "Nouakchott",
+        "Zastava": "mauritanija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Mauricijus",
+        "GlavniGrad": "Port Louis",
+        "Zastava": "mauricijus_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Meksiko",
+        "GlavniGrad": "Mexico City",
+        "Zastava": "meksiko_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Mikronezija",
+        "GlavniGrad": "Palikir",
+        "Zastava": "makronezija_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Moldavija",
+        "GlavniGrad": "Čisinau",
+        "Zastava": "moldavija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Monako",
+        "GlavniGrad": "Monako",
+        "Zastava": "monako_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Mongolija",
+        "GlavniGrad": "Ulan Batur",
+        "Zastava": "mongolija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Crna Gora",
+        "GlavniGrad": "Podgorica",
+        "Zastava": "crnagora_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Maroko",
+        "GlavniGrad": "Rabat",
+        "Zastava": "maroko_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Mozambik",
+        "GlavniGrad": "Maputo",
+        "Zastava": "mozambik_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Mianmar",
+        "GlavniGrad": "Naypyidaw",
+        "Zastava": "mianmar_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Namibija",
+        "GlavniGrad": "Windhoek",
+        "Zastava": "namibija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Nauru",
+        "GlavniGrad": "Yaren District",
+        "Zastava": "nauru_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Nepal",
+        "GlavniGrad": "Kathmandu",
+        "Zastava": "nepal_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Nizozemska",
+        "GlavniGrad": "Amsterdam",
+        "Zastava": "nizozemska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Novi Zeland",
+        "GlavniGrad": "Velington",
+        "Zastava": "novizeland_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Nikaragva",
+        "GlavniGrad": "Menagua",
+        "Zastava": "nikaragva_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Niger",
+        "GlavniGrad": "Niamey",
+        "Zastava": "niger_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Nigerija",
+        "GlavniGrad": "Abuja",
+        "Zastava": "nigerija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Sjeverna Koreja",
+        "GlavniGrad": "Pjongjang",
+        "Zastava": "skoreja_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Sjeverna Makedonija",
+        "GlavniGrad": "Skoplje",
+        "Zastava": "makedonija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Norveška",
+        "GlavniGrad": "Oslo",
+        "Zastava": "norveska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Oman",
+        "GlavniGrad": "Muscat",
+        "Zastava": "oman_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Pakistan",
+        "GlavniGrad": "Islamabad",
+        "Zastava": "pakistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Palau",
+        "GlavniGrad": "Ngerulmud",
+        "Zastava": "palau_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Palestina",
+        "GlavniGrad": "Jeruzalem",
+        "Zastava": "palestina_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Panama",
+        "GlavniGrad": "Panama City",
+        "Zastava": "panama_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Papua Nova Gvineja",
+        "GlavniGrad": "Post Moresby",
+        "Zastava": "papua_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Paragvaj",
+        "GlavniGrad": "Asuncion",
+        "Zastava": "paragvaj_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Peru",
+        "GlavniGrad": "Lima",
+        "Zastava": "peru_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Filipini",
+        "GlavniGrad": "Manila",
+        "Zastava": "filipini_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Poljska",
+        "GlavniGrad": "Varšava",
+        "Zastava": "poljska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Portugal",
+        "GlavniGrad": "Lisabon",
+        "Zastava": "portugal_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Katar",
+        "GlavniGrad": "Doha",
+        "Zastava": "katar_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Rumunija",
+        "GlavniGrad": "Bukurešt",
+        "Zastava": "rumunija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Rusija",
+        "GlavniGrad": "Moskva",
+        "Zastava": "rusija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Rvanda",
+        "GlavniGrad": "Kigali",
+        "Zastava": "rvanda_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Sveti Kits i Nevis",
+        "GlavniGrad": "Basseterre",
+        "Zastava": "svetikits_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Sveta Lucija",
+        "GlavniGrad": "Castries",
+        "Zastava": "svetalucija_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Sveti Vinsent i Grenadini",
+        "GlavniGrad": "Kingstown",
+        "Zastava": "svetivinsent_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Samoa",
+        "GlavniGrad": "Apia",
+        "Zastava": "samoa_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "San Marino",
+        "GlavniGrad": "San Marino",
+        "Zastava": "sanmarino_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Sao Tome i Principe",
+        "GlavniGrad": "Sao Tome",
+        "Zastava": "saotome_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Saudijska Arabija",
+        "GlavniGrad": "Rijad",
+        "Zastava": "arabija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Senegal",
+        "GlavniGrad": "Dakar",
+        "Zastava": "senegal_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Srbija",
+        "GlavniGrad": "Beograd",
+        "Zastava": "srbija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Sejšeli",
+        "GlavniGrad": "Victoria",
+        "Zastava": "sejseli_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Siera Leone",
+        "GlavniGrad": "Freetown",
+        "Zastava": "sieraleone_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Singapur",
+        "GlavniGrad": "Singapur",
+        "Zastava": "singapur_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Slovačka",
+        "GlavniGrad": "Bratislava",
+        "Zastava": "slovacka_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Slovenija",
+        "GlavniGrad": "Ljubljana",
+        "Zastava": "slovenija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Solomonski Otoci",
+        "GlavniGrad": "Honiara",
+        "Zastava": "solomonski_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Somalija",
+        "GlavniGrad": "Mogadishu",
+        "Zastava": "somalija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Južnoafrička Republika",
+        "GlavniGrad": "Cape Town",
+        "Zastava": "juznaafrika_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Južna Koreja",
+        "GlavniGrad": "Seul",
+        "Zastava": "jkoreja_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Južni Sudan",
+        "GlavniGrad": "Juba",
+        "Zastava": "jsudan_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Španija",
+        "GlavniGrad": "Madrid",
+        "Zastava": "spanija_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Šri Lanka",
+        "GlavniGrad": "Sri Jayawardenepura Kotte",
+        "Zastava": "srilanka_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Sudan",
+        "GlavniGrad": "Khartoum",
+        "Zastava": "sudan_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Surinam",
+        "GlavniGrad": "Paramaribo",
+        "Zastava": "surinam_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Švedska",
+        "GlavniGrad": "Štokolm",
+        "Zastava": "svedska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Švicarska",
+        "GlavniGrad": "Bern",
+        "Zastava": "svicarska_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Sirija",
+        "GlavniGrad": "Damask",
+        "Zastava": "sirija_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Tajvan",
+        "GlavniGrad": "Taipei",
+        "Zastava": "tajvan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Tadžikistan",
+        "GlavniGrad": "Dushanbe",
+        "Zastava": "tadzikistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Tanzanija",
+        "GlavniGrad": "Dodoma",
+        "Zastava": "tanzanija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Tajland",
+        "GlavniGrad": "Bangkok",
+        "Zastava": "tajland_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Timor-Leste",
+        "GlavniGrad": "Dili",
+        "Zastava": "timorleste_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Togo",
+        "GlavniGrad": "Lome",
+        "Zastava": "togo_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Tonga",
+        "GlavniGrad": "Nuku'alofa",
+        "Zastava": "tonga_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Trinidad i Tobago",
+        "GlavniGrad": "Port of Spain",
+        "Zastava": "trinidad_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Tunis",
+        "GlavniGrad": "Tunis",
+        "Zastava": "tunis_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Turska",
+        "GlavniGrad": "Ankara",
+        "Zastava": "turska_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Turkmenistan",
+        "GlavniGrad": "Ashgabat",
+        "Zastava": "turkmenistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Tuvalu",
+        "GlavniGrad": "Funafuti",
+        "Zastava": "tuvalu_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Uganda",
+        "GlavniGrad": "Kampala",
+        "Zastava": "uganda_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Ukrajina",
+        "GlavniGrad": "Kijev",
+        "Zastava": "ukrajina_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Ujedinjeni Arapski Emirati",
+        "GlavniGrad": "Abu Dhabi",
+        "Zastava": "uae_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Urugvaj",
+        "GlavniGrad": "Montevideo",
+        "Zastava": "urugvaj_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Uzbekistan",
+        "GlavniGrad": "Taškent",
+        "Zastava": "uzbekistan_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Vatikan",
+        "GlavniGrad": "Vatican City",
+        "Zastava": "vatikan_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Venecuela",
+        "GlavniGrad": "Caracas",
+        "Zastava": "venecuela_flag.jpg",
+        "Kontinent": "Južna Amerika"
+    },
+    {
+        "Naziv": "Vietnam",
+        "GlavniGrad": "Hanoi",
+        "Zastava": "vietnam_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Jemen",
+        "GlavniGrad": "Sana'a",
+        "Zastava": "jemen_flag.jpg",
+        "Kontinent": "Azija"
+    },
+    {
+        "Naziv": "Zambija",
+        "GlavniGrad": "Lusaka",
+        "Zastava": "zambija_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Zimbabve",
+        "GlavniGrad": "Harare",
+        "Zastava": "zimbabve_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Demokratska Republika Kongo",
+        "GlavniGrad": "Kinšasa",
+        "Zastava": "drk_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Benin",
+        "GlavniGrad": "Porto-Novo",
+        "Zastava": "benin_flag.jpg",
+        "Kontinent": "Afrika"
+    },
+    {
+        "Naziv": "Ujedinjeno Kraljevstvo",
+        "GlavniGrad": "London",
+        "Zastava": "uk_flag.jpg",
+        "Kontinent": "Evropa"
+    },
+    {
+        "Naziv": "Sjedinjene Američke Države",
+        "GlavniGrad": "Washington D.C.",
+        "Zastava": "sad_flag.jpg",
+        "Kontinent": "Sjeverna Amerika"
+    },
+    {
+        "Naziv": "Vanuatu",
+        "GlavniGrad": "Port Vila",
+        "Zastava": "vanuatu_flag.jpg",
+        "Kontinent": "Australija i Okeanija"
+    },
+    {
+        "Naziv": "Komoros",
+        "GlavniGrad": "Moroni",
+        "Zastava": "komoros_flag.jpg",
+        "Kontinent": "Afrika"
+    }
+]
