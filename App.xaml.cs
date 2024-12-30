@@ -40,7 +40,6 @@
 			// Tačan naziv resursa
 			var resourceName = "Kviz.Resources.Raw.drzave.json";
 
-			await dbService.ClearDrzavaTableAsync();
 
 			// Seed baza iz JSON-a
 			await dbService.SeedFromJsonAsync(resourceName);

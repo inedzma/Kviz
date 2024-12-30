@@ -4,15 +4,89 @@
              x:Class="Kviz.MainPage"
              Title="Drzave">
 
-    <CollectionView ItemsSource="{Binding Drzave}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <Label Text="{Binding Naziv}" FontSize="20" />
-                    <Label Text="{Binding GlavniGrad}" FontSize="14" />
-                </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <StackLayout x:Name="StartPage" IsVisible="True">
+        <Label Text="Kviz" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Image Source="globes.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Započni kviz" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <StackLayout x:Name="ThemeSelectionPage" IsVisible="False">
+            <Label Text="Izaberi temu" FontSize="Large"/>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="zastave" GroupName="theme"/>
+                <Label Text="Zastave"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="gradovi" GroupName="theme"/>
+                <Label Text="Glavni gradovi"/>
+            </StackLayout>
+            <Button Clicked="Button_Clicked_1" Text="Odaberi"/>
+        </StackLayout>
+        <StackLayout x:Name="ContinentSelectionPage" IsVisible="False">
+            <Label Text="Izaberi kontinent" FontSize="Large"/>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="Evropa" GroupName="kontinent" IsChecked="{Binding isEvropaSelected, Mode=TwoWay}"/>
+                <Label Text="Evropa"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="Azija" GroupName="kontinent" IsChecked="{Binding isAzijaSelected, Mode=TwoWay}"/>
+                <Label Text="Azija"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="Afrika" GroupName="kontinent" IsChecked="{Binding isAfrikaSelected, Mode=TwoWay}"/>
+                <Label Text="Afrika"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="Australija" GroupName="kontinent" IsChecked="{Binding isAustralijaSelected, Mode=TwoWay}"/>
+                <Label Text="Australija i Okeanija"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="SAmerika" GroupName="kontinent" IsChecked="{Binding isSAmerikaSelected, Mode=TwoWay}"/>
+                <Label Text="Sjeverna Amerika"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="JAmerika" GroupName="kontinent" IsChecked="{Binding isJAmerikaSelected, Mode=TwoWay}"/>
+                <Label Text="Južna Amerika"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="Svijet" GroupName="kontinent" IsChecked="{Binding isSvijetSelected, Mode=TwoWay}"/>
+                <Label Text="Svijet"/>
+            </StackLayout>
+            <Button Clicked="Button_Clicked_2" Text="Odaberi"/>
+        </StackLayout>
+        <StackLayout x:Name="FormatSelectionPage" IsVisible="False">
+            <Label Text="Izaberi temu" FontSize="Large"/>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="pitanja" GroupName="format" IsChecked="{Binding is10Selected, Mode=TwoWay}"/>
+                <Label Text="10 pitanja"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="sva" GroupName="format" IsChecked="{Binding isSvaSelected, Mode=TwoWay}"/>
+                <Label Text="Sva pitanja"/>
+            </StackLayout>
+            <Button Command="{Binding ZapocniKvizCommand}"  Text="Zapocni kviz"/>
+        </StackLayout>
+
+        <StackLayout IsVisible="False" x:Name="pitanje">
+            
+            <Label x:Name="pitanjeLabel" FontSize="Large" Text="Glavni grad države"/>
+            <Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" />
+
+            <CollectionView ItemsSource="{Binding odgovori}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+        <StackLayout IsVisible="False" x:Name="kraj">
+            <Label Text="Kraj kviza"/>
+            <Label Text="{Binding TacniOdgovori}"/>
+            <Button Text="Nazad na početnu" Clicked="Button_Clicked_3"/>
+        </StackLayout>
+    </StackLayout>
 
 </ContentPage>

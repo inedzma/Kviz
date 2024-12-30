@@ -77,7 +77,7 @@ namespace Kviz
 				}
 			}
 
-			Console.WriteLine("Podaci su uspešno dodani iz JSON-a.");
+			Console.WriteLine("Podaci su uspješno dodani iz JSON-a.");
 		}
 
 		public async Task ClearDrzavaTableAsync()
