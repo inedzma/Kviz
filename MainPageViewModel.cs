@@ -148,6 +148,35 @@ namespace Kviz
 			}
 		}
 
+		private bool _isZastaveSelected;
+		public bool isZastaveSelected
+		{
+			get => _isZastaveSelected;
+			set
+			{
+				if( _isZastaveSelected != value)
+				{
+					_isZastaveSelected = value;
+					OnPropertyChanged(nameof(isZastaveSelected));
+				}
+			}
+		}
+
+		private bool _isGradoviSelected;
+		public bool isGradoviSelected
+		{
+			get => _isGradoviSelected;
+			set
+			{
+				if ( _isGradoviSelected != value)
+				{
+					_isGradoviSelected = value;
+					OnPropertyChanged(nameof( isGradoviSelected));
+				}
+			}
+		}
+
+
 
 		private Drzava _trenutnoPitanje;
 		public Drzava? TrenutnoPitanje
@@ -247,12 +276,26 @@ namespace Kviz
 		{
 			var random = new Random();
 			odgovori.Clear();
-			odgovori.Add(pitanje.GlavniGrad);
 
-			var moguciOdgovori = FiltriraneDrzave.Where(d => d.GlavniGrad != odgovori[0]).OrderBy(x => random.Next()).Take(3).Select(d => d.GlavniGrad).ToList();
-			foreach(var o in moguciOdgovori)
+			if (isGradoviSelected)
 			{
-				odgovori.Add(o);
+				odgovori.Add(pitanje.GlavniGrad);
+
+				var moguciOdgovori = FiltriraneDrzave.Where(d => d.GlavniGrad != odgovori[0]).OrderBy(x => random.Next()).Take(3).Select(d => d.GlavniGrad).ToList();
+				foreach (var o in moguciOdgovori)
+				{
+					odgovori.Add(o);
+				}
+			}
+			else
+			{
+				odgovori.Add(pitanje.Naziv);
+
+				var moguciOdgovori = FiltriraneDrzave.Where(d => d.Naziv != odgovori[0]).OrderBy(x => random.Next()).Take(3).Select(d => d.Naziv).ToList();
+				foreach (var o in moguciOdgovori)
+				{
+					odgovori.Add(o);
+				}
 			}
 			var shuffled = odgovori.OrderBy(x => random.Next()).ToList();
 			odgovori.Clear();
@@ -275,7 +318,7 @@ namespace Kviz
 			TacniOdgovori = 0;
 			
 			TrenutnoPitanje = FiltriraneDrzave[_trenutnoPitanjeIndex];
-			TacanOdgovor = TrenutnoPitanje.GlavniGrad;
+			TacanOdgovor = isGradoviSelected ? TrenutnoPitanje.GlavniGrad : TrenutnoPitanje.Naziv;
 			NetacniOdgovori(TrenutnoPitanje);
 			Console.WriteLine($"Broj filtriranih drzava: {FiltriraneDrzave.Count()}\n\n\n");
 
@@ -295,7 +338,7 @@ namespace Kviz
 			{
 				_trenutnoPitanjeIndex++;
 				TrenutnoPitanje = FiltriraneDrzave[_trenutnoPitanjeIndex];
-				TacanOdgovor = TrenutnoPitanje.GlavniGrad;
+				TacanOdgovor = isGradoviSelected ? TrenutnoPitanje.GlavniGrad : TrenutnoPitanje.Naziv;
 				NetacniOdgovori(TrenutnoPitanje);
 				
 			}

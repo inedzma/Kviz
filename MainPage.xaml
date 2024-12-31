@@ -14,11 +14,11 @@
         <StackLayout x:Name="ThemeSelectionPage" IsVisible="False">
             <Label Text="Izaberi temu" FontSize="Large"/>
             <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="zastave" GroupName="theme"/>
+                <RadioButton x:Name="zastave" GroupName="theme" IsChecked="{Binding isZastaveSelected, Mode=TwoWay}"/>
                 <Label Text="Zastave"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="gradovi" GroupName="theme"/>
+                <RadioButton x:Name="gradovi" GroupName="theme" IsChecked="{Binding isGradoviSelected, Mode=TwoWay}"/>
                 <Label Text="Glavni gradovi"/>
             </StackLayout>
             <Button Clicked="Button_Clicked_1" Text="Odaberi"/>
@@ -70,8 +70,11 @@
 
         <StackLayout IsVisible="False" x:Name="pitanje">
             
-            <Label x:Name="pitanjeLabel" FontSize="Large" Text="Glavni grad države"/>
-            <Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" />
+            <Label x:Name="pitanjeLabel" FontSize="Large" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}"/>
+            <Label  FontSize="Large" Text="Koji je glavni grad države: " IsVisible="{Binding isGradoviSelected}"/>
+
+            <Label Text="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
+            <Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" IsVisible="{Binding isGradoviSelected}"/>
 
             <CollectionView ItemsSource="{Binding odgovori}">
                 <CollectionView.ItemTemplate>
