@@ -69,11 +69,11 @@
         </StackLayout>
 
         <StackLayout IsVisible="False" x:Name="pitanje">
-            
+
             <Label x:Name="pitanjeLabel" FontSize="Large" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}"/>
             <Label  FontSize="Large" Text="Koji je glavni grad države: " IsVisible="{Binding isGradoviSelected}"/>
 
-            <Label Text="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
+            <Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
             <Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" IsVisible="{Binding isGradoviSelected}"/>
 
             <CollectionView ItemsSource="{Binding odgovori}">
