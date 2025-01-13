@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kviz.RegistrationPage"
+             Title="RegistrationPage">
+    <StackLayout>
+        <Label 
+            Text="Registracija" FontSize="Large"/>
+        <Label Text="Ime:" x:Name="imeLabel"/>
+        <Entry Placeholder="Unesite vaše ime..." x:Name="ime"/>
+        <Label Text="Prezime:" x:Name="prezimeLabel"/>
+        <Entry Placeholder="Unesite vaše prezime..." x:Name="prezime"/>
+        <Label Text="Email:" x:Name="emailLabel"/>
+        <Entry Placeholder="Unesite vašu email adresu..." x:Name="email"/>
+        <Label Text="Lozinka:" x:Name="lozinkaLabel"/>
+        <Entry Placeholder="Unesite vašu lozinku..." x:Name="lozinka"/>
+        <Label Text="Potvrdite lozinku:" x:Name="potvrdiLabel"/>
+        <Entry Placeholder="Potvrdite lozinku" x:Name="potvrdiLozinku"/>
+
+        <Button Text="Registruj se" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

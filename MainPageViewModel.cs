@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace Kviz
 {
+
 	public class MainPageViewModel : INotifyPropertyChanged
 	{
 		public ObservableCollection<Drzava> Drzave { get; set; }
-		private readonly LocalDBService _dbService;
+		
 
 		
 
@@ -199,7 +200,6 @@ namespace Kviz
 
 		public MainPageViewModel()
 		{
-			_dbService = new LocalDBService();
 			Drzave = new ObservableCollection<Drzava>();
 			FiltriraneDrzave = new ObservableCollection<Drzava>();
 			Task.Run(async () => await InitializeAsync());
@@ -217,7 +217,7 @@ namespace Kviz
 			if (Drzave.Count > 0) return;
 
 			Drzave.Clear();
-			var drzave = await _dbService.GetAllDrzaveAsync();
+			var drzave = await App._dbService.GetAllDrzaveAsync();
 
 			Console.WriteLine($"Broj drzava dodanih: {drzave.Count}");
 			foreach (var drzava in drzave)
