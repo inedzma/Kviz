@@ -2,6 +2,7 @@
 {
 	public partial class MainPage : ContentPage
 	{
+
 		private MainPageViewModel viewModel;
 		public MainPage()
 		{
@@ -12,7 +13,7 @@
 			viewModel.StartQuizEvent += OnStartQuiz;
 			viewModel.StopQuizEvent += OnStopQuiz;
 
-			
+			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
 		private void OnStartQuiz(object sender, EventArgs e)

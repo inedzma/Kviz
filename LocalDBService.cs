@@ -12,6 +12,8 @@ namespace Kviz
 			_connection = new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_NAME));
 			_connection.CreateTableAsync<Drzava>().Wait();
 			_connection.CreateTableAsync<Pitanje>().Wait();
+			_connection.CreateTableAsync<Korisnik>().Wait();
+			_connection.CreateTableAsync<Rezultat>().Wait();
 		}
 
 		public Task<List<Drzava>> GetAllDrzaveAsync()
@@ -44,6 +46,50 @@ namespace Kviz
 			return _connection.DeleteAsync<Pitanje>(id);
 		}
 
+		public Task<List<Korisnik>> GetAllKorisnici()
+		{
+			return _connection.Table<Korisnik>().ToListAsync();
+		}
+
+		public Task<int> SaveKorisnikAsync(Korisnik korisnik)
+		{
+			return _connection.InsertAsync(korisnik);
+		}
+
+		public Task<int> DeleteKorisnikAsync(int id)
+		{
+			return _connection.DeleteAsync<Korisnik>(id);
+		}
+
+		public Task<Korisnik> GetKorisnikAsync(string email)
+		{
+			return _connection.Table<Korisnik>().Where(k => k.Email == email).FirstOrDefaultAsync();
+		}
+
+		/*public Task<bool> DoesKorisnikExist(string email)
+		{
+			return _connection.Table<Korisnik>().Where(k => k.Email == email).FirstOrDefaultAsync();
+		}*/
+
+		public Task<List<Rezultat>> GetSveRezulate()
+		{
+			return _connection.Table<Rezultat>().ToListAsync();
+		}
+
+		public Task<int> SaveRezultatAsync(Rezultat rezultat)
+		{
+			return _connection.InsertAsync(rezultat);
+		}
+
+		public Task<List<Rezultat>> GetRezultateKontinent(string continent)
+		{
+			return _connection.Table<Rezultat>().Where(r => r.Kontinent == continent).ToListAsync();
+		}
+
+		public Task<int> DeleteRezultatAsync(int id)
+		{
+			return _connection.DeleteAsync<Rezultat>(id);
+		}
 
 		public async Task SeedFromJsonAsync(string resourceName)
 		{
@@ -84,6 +130,51 @@ namespace Kviz
 		{
 			await _connection.DeleteAllAsync<Drzava>();
 		}
+
+		public async Task AppendUserToJsonAsync(Korisnik noviKorisnik)
+		{
+			string jsonFilePath = Path.Combine(FileSystem.AppDataDirectory, "korisnici.json");
+
+			List<Korisnik> korisnici = new List<Korisnik>();
+
+			if (File.Exists(jsonFilePath))
+			{
+				var jsonContent = await File.ReadAllTextAsync(jsonFilePath);
+
+				korisnici = JsonSerializer.Deserialize<List<Korisnik>>(jsonContent) ?? new List<Korisnik>();
+			}
+
+			korisnici.Add(noviKorisnik);
+
+			var updatedJsonContent = JsonSerializer.Serialize(korisnici, new JsonSerializerOptions { WriteIndented = true });
+			await File.WriteAllTextAsync(jsonFilePath, updatedJsonContent);
+		}
+
+		public async Task LoadUsersFromJsonAsync()
+		{
+			string jsonFile = Path.Combine(FileSystem.AppDataDirectory, "korisnici.json");
+
+			if (!File.Exists(jsonFile))
+			{
+				return;
+			}
+			var jsonContent = await File.ReadAllTextAsync(jsonFile);
+			var korisnici = JsonSerializer.Deserialize<List<Korisnik>>(jsonContent);
+			if(korisnici == null || korisnici.Count == 0)
+			{
+				return;	
+			}
+			var existingCount = await _connection.Table<Korisnik>().CountAsync();
+			if(existingCount > 0)
+			{
+				return;
+			}
+			foreach (var korisnik in korisnici)
+			{
+				await SaveKorisnikAsync(korisnik);
+			}
+		}
+
 
 
 
