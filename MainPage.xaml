@@ -3,93 +3,215 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Kviz.MainPage"
              Title="Drzave">
+	<ContentPage.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+			<GradientStop Color="#FF9900" Offset="0.0" />
+			<GradientStop Color="#00BFFF" Offset="1.0" />
+		</LinearGradientBrush>
+	</ContentPage.Background>
 
-    <StackLayout VerticalOptions="CenterAndExpand">
-        <StackLayout x:Name="StartPage" IsVisible="True">
-        <Label Text="Kviz" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        <Image Source="globes.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        <Button Text="Započni kviz" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-        </StackLayout>
+	<StackLayout VerticalOptions="CenterAndExpand">
+		<StackLayout x:Name="StartPage" IsVisible="True">
+			<Image Source="settings123.png" WidthRequest="25" HeightRequest="25" Margin="0, 20, 10, 0"
+           HorizontalOptions="End"/>
+			<Label Text="Dobrodošli u" FontSize="45" FontAttributes="Bold" FontFamily="Audiowide-Regular" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="#132F82"/>
+			<Label Text="GeoQuizz!"  FontFamily="Audiowide-Regular" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="White"/>
 
-        <StackLayout x:Name="ThemeSelectionPage" IsVisible="False">
-            <Label Text="Izaberi temu" FontSize="Large"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="zastave" GroupName="theme" IsChecked="{Binding isZastaveSelected, Mode=TwoWay}"/>
-                <Label Text="Zastave"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="gradovi" GroupName="theme" IsChecked="{Binding isGradoviSelected, Mode=TwoWay}"/>
-                <Label Text="Glavni gradovi"/>
-            </StackLayout>
-            <Button Clicked="Button_Clicked_1" Text="Odaberi"/>
-        </StackLayout>
-        <StackLayout x:Name="ContinentSelectionPage" IsVisible="False">
-            <Label Text="Izaberi kontinent" FontSize="Large"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="Evropa" GroupName="kontinent" IsChecked="{Binding isEvropaSelected, Mode=TwoWay}"/>
-                <Label Text="Evropa"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="Azija" GroupName="kontinent" IsChecked="{Binding isAzijaSelected, Mode=TwoWay}"/>
-                <Label Text="Azija"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="Afrika" GroupName="kontinent" IsChecked="{Binding isAfrikaSelected, Mode=TwoWay}"/>
-                <Label Text="Afrika"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="Australija" GroupName="kontinent" IsChecked="{Binding isAustralijaSelected, Mode=TwoWay}"/>
-                <Label Text="Australija i Okeanija"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="SAmerika" GroupName="kontinent" IsChecked="{Binding isSAmerikaSelected, Mode=TwoWay}"/>
-                <Label Text="Sjeverna Amerika"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="JAmerika" GroupName="kontinent" IsChecked="{Binding isJAmerikaSelected, Mode=TwoWay}"/>
-                <Label Text="Južna Amerika"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="Svijet" GroupName="kontinent" IsChecked="{Binding isSvijetSelected, Mode=TwoWay}"/>
-                <Label Text="Svijet"/>
-            </StackLayout>
-            <Button Clicked="Button_Clicked_2" Text="Odaberi"/>
-        </StackLayout>
-        <StackLayout x:Name="FormatSelectionPage" IsVisible="False">
-            <Label Text="Izaberi temu" FontSize="Large"/>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="pitanja" GroupName="format" IsChecked="{Binding is10Selected, Mode=TwoWay}"/>
-                <Label Text="10 pitanja"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <RadioButton x:Name="sva" GroupName="format" IsChecked="{Binding isSvaSelected, Mode=TwoWay}"/>
-                <Label Text="Sva pitanja"/>
-            </StackLayout>
-            <Button Command="{Binding ZapocniKvizCommand}"  Text="Zapocni kviz"/>
-        </StackLayout>
+			<Image Source="globes3.png"
+            HeightRequest="450"
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+			<Button Text="Krenimo!" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+          BackgroundColor="#FB8D12"
+          TextColor="White"
+          FontSize="20"
+          WidthRequest="200"
+          HeightRequest="50" FontFamily="AntonSC-Regular" CornerRadius="50" Padding="0, 0, 0, 5"
+          />
 
-        <StackLayout IsVisible="False" x:Name="pitanje">
+			<HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
+				<Button Text="REZULTATI" FontAttributes="Bold" WidthRequest="100" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50"/>
+				<Button Text="INFO" WidthRequest="100" FontAttributes="Bold" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50" />
+			</HorizontalStackLayout>
 
-            <Label x:Name="pitanjeLabel" FontSize="Large" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}"/>
-            <Label  FontSize="Large" Text="Koji je glavni grad države: " IsVisible="{Binding isGradoviSelected}"/>
+		</StackLayout>
 
-            <Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
-            <Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" IsVisible="{Binding isGradoviSelected}"/>
+		<VerticalStackLayout Spacing="20" Padding="20" x:Name="ThemeSelectionPage" IsVisible="False">
+			<Label Text="IZABERI KATEGORIJU"
+           FontSize="28"
+           FontFamily="Audiowide-Regular"
+           HorizontalOptions="Center"
+           FontAttributes="Bold"
+           TextColor="#123F82"/>
 
-            <CollectionView ItemsSource="{Binding odgovori}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}"/>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
 
-        <StackLayout IsVisible="False" x:Name="kraj">
-            <Label Text="Kraj kviza"/>
-            <Label Text="{Binding TacniOdgovori}"/>
-            <Button Text="Nazad na početnu" Clicked="Button_Clicked_3"/>
-        </StackLayout>
-    </StackLayout>
+			<Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
+				<Frame Grid.Column="0"
+               BackgroundColor="#FF9900"
+               CornerRadius="10"
+               Padding="5"
+               VerticalOptions="Center"
+               WidthRequest="170" HeightRequest="400" HasShadow="True">
+					<VerticalStackLayout Spacing="5" VerticalOptions="Center">
+						<Image Source="zastavaicona.png" HeightRequest="250" />
+						<HorizontalStackLayout Spacing="0" HorizontalOptions="Center">
+							<RadioButton x:Name="zastave"
+                                 GroupName="theme"
+                                 IsChecked="{Binding isZastaveSelected, Mode=TwoWay}" />
+							<Label Text="Zastave"
+                           FontSize="18"
+                           Padding="-18, 8, 10, 0" />
+						</HorizontalStackLayout>
+					</VerticalStackLayout>
+				</Frame>
+
+				<Frame Grid.Column="1"
+               BackgroundColor="#00BFFF"
+               CornerRadius="10"
+               Padding="5"
+               VerticalOptions="Center"
+               WidthRequest="170"
+               HeightRequest="400"
+               HasShadow="True">
+					<VerticalStackLayout Spacing="5" VerticalOptions="Center">
+						<Image Source="glavnigricona.png" HeightRequest="250" />
+						<HorizontalStackLayout HorizontalOptions="Center">
+							<RadioButton x:Name="gradovi"
+                                 GroupName="theme"
+                                 IsChecked="{Binding isGradoviSelected, Mode=TwoWay}" />
+							<Label Text="Glavni gradovi"
+                           FontSize="18"
+                           Margin="-18, 9, 25, 0" />
+						</HorizontalStackLayout>
+					</VerticalStackLayout>
+				</Frame>
+			</Grid>
+
+			<Button Text="Odaberi"
+            Clicked="Button_Clicked_1"
+            BackgroundColor="#123f82"
+            TextColor="White"
+            FontSize="18"
+                    FontAttributes="Bold"
+            CornerRadius="10"
+            HorizontalOptions="Center"
+                    HeightRequest="50"
+                    WidthRequest="200"/>
+		</VerticalStackLayout>
+
+		<VerticalStackLayout x:Name="ContinentSelectionPage" IsVisible="False">
+			<ScrollView VerticalOptions="FillAndExpand" Orientation="Vertical">
+				<StackLayout  Orientation="Vertical">
+					<Label Text="Izaberi kontinent" FontFamily="Audiowide-Regular" FontSize="30" Margin="10, 0, 10, 0" HorizontalOptions="Center" FontAttributes="Bold"/>
+					<Grid ColumnDefinitions="*,*"
+                  RowDefinitions="auto, auto, auto, auto"
+                  ColumnSpacing="20"
+                  RowSpacing="20"
+                  HorizontalOptions="Center">
+
+						<Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" Padding="10" BackgroundColor="AntiqueWhite" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="evropa1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="Evropa" GroupName="kontinent" IsChecked="{Binding isEvropaSelected, Mode=TwoWay}" Margin="45,-15,0,0"/>
+								<Label Text="Evropa" Margin="39,-15,0,0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="0" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="azija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="Azija" GroupName="kontinent" IsChecked="{Binding isAzijaSelected, Mode=TwoWay}" Margin="45, -15, 0, 0"/>
+								<Label Text="Azija" Margin="45, -15, 0, 0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" Padding="10" BackgroundColor="AntiqueWhite" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="afrika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="Afrika" GroupName="kontinent" IsChecked="{Binding isAfrikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
+								<Label Text="Afrika" Margin="45,-15,0,0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="1" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="australija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="Australija" GroupName="kontinent" IsChecked="{Binding isAustralijaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
+								<Label Text="Australija" Margin="33,-15,0,0"/>
+								<Label Text="i Okeanija" Margin="32, -15,0,0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="2" Grid.Column="0" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="samerika123.png" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center" />
+								<RadioButton x:Name="SAmerika" GroupName="kontinent" IsChecked="{Binding isSAmerikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
+								<Label Text="Sjeverna Amerika" Margin="38,-15,0,0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="2" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="jamerika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="JAmerika" GroupName="kontinent" IsChecked="{Binding isJAmerikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
+								<Label Text="Južna" Margin="48,-20,0,0"/>
+								<Label Text="Amerika" Margin="38,-10,0,0"/>
+							</VerticalStackLayout>
+						</Frame>
+
+						<Frame Grid.Row="3" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
+								<Image Source="svijet1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+								<RadioButton x:Name="Svijet" GroupName="kontinent" IsChecked="{Binding isSvijetSelected, Mode=TwoWay}"/>
+								<Label Text="Svijet"/>
+							</VerticalStackLayout>
+						</Frame>
+					</Grid>
+
+					<Button BackgroundColor="Aqua" TextColor="Black" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_2" Text="Odaberi"/>
+				</StackLayout>
+			</ScrollView>
+		</VerticalStackLayout>
+
+
+
+
+		<VerticalStackLayout x:Name="FormatSelectionPage" IsVisible="False">
+			<Label Text="Izaberi temu" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"/>
+			<StackLayout Orientation="Horizontal">
+				<RadioButton x:Name="pitanja" GroupName="format" IsChecked="{Binding is10Selected, Mode=TwoWay}"/>
+				<Label Text="10 pitanja"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+				<RadioButton x:Name="sva" GroupName="format" IsChecked="{Binding isSvaSelected, Mode=TwoWay}"/>
+				<Label Text="Sva pitanja"/>
+			</StackLayout>
+			<Button Command="{Binding ZapocniKvizCommand}"  Text="Zapocni kviz"/>
+		</VerticalStackLayout>
+
+
+
+		<StackLayout IsVisible="False" x:Name="pitanje">
+
+			<Label x:Name="pitanjeLabel" FontSize="Large" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}"/>
+			<Label  FontSize="Large" Text="Koji je glavni grad države: " IsVisible="{Binding isGradoviSelected}"/>
+
+			<Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
+			<Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" IsVisible="{Binding isGradoviSelected}"/>
+
+			<CollectionView ItemsSource="{Binding odgovori}">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}"/>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</StackLayout>
+
+		<StackLayout IsVisible="False" x:Name="kraj">
+			<Label Text="Kraj kviza"/>
+			<Label Text="{Binding TacniOdgovori}"/>
+			<Button Text="Nazad na početnu" Clicked="Button_Clicked_3"/>
+		</StackLayout>
+	</StackLayout>
 
 </ContentPage>

@@ -60,6 +60,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\AntonSC-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Audiowide-Regular.ttf" />
+	  <None Remove="Resources\Images\afrika1.png" />
+	  <None Remove="Resources\Images\australija1.png" />
+	  <None Remove="Resources\Images\azija1.png" />
+	  <None Remove="Resources\Images\evropa1.png" />
+	  <None Remove="Resources\Images\glavnigricona.png" />
+	  <None Remove="Resources\Images\glavnigricona1.png" />
+	  <None Remove="Resources\Images\globes3.png" />
+	  <None Remove="Resources\Images\jamerika1.png" />
+	  <None Remove="Resources\Images\samerika1.png" />
+	  <None Remove="Resources\Images\samerika123.png" />
+	  <None Remove="Resources\Images\settings1.png" />
+	  <None Remove="Resources\Images\settings12.png" />
+	  <None Remove="Resources\Images\settings123.png" />
+	  <None Remove="Resources\Images\zastavaicona.png" />
+	  <None Remove="Resources\Images\zastavaicona1.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <EmbeddedResource Include="Resources\Raw\drzave.json" />
 	</ItemGroup>
 
