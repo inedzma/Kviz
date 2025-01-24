@@ -98,7 +98,7 @@
                     WidthRequest="200"/>
 		</VerticalStackLayout>
 
-		<VerticalStackLayout x:Name="ContinentSelectionPage" IsVisible="False">
+		<StackLayout x:Name="ContinentSelectionPage" IsVisible="False" VerticalOptions="FillAndExpand">
 			<ScrollView VerticalOptions="FillAndExpand" Orientation="Vertical">
 				<StackLayout  Orientation="Vertical">
 					<Label Text="Izaberi kontinent" FontFamily="Audiowide-Regular" FontSize="30" Margin="10, 0, 10, 0" HorizontalOptions="Center" FontAttributes="Bold"/>
@@ -170,7 +170,7 @@
 					<Button BackgroundColor="Aqua" TextColor="Black" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_2" Text="Odaberi"/>
 				</StackLayout>
 			</ScrollView>
-		</VerticalStackLayout>
+		</StackLayout>
 
 
 
