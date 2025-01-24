@@ -29,8 +29,8 @@
           />
 
 			<HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Padding="10">
-				<Button Text="REZULTATI" FontAttributes="Bold" WidthRequest="100" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50"/>
-				<Button Text="INFO" WidthRequest="100" FontAttributes="Bold" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50" />
+				<Button Text="REZULTATI" FontAttributes="Bold" WidthRequest="100" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50" Clicked="ShowResults"/>
+				<Button Text="INFO" WidthRequest="100" FontAttributes="Bold" TextColor="White" BackgroundColor="#FB8D12" BorderWidth="0.5" CornerRadius="50" Clicked="ShowInfo"/>
 			</HorizontalStackLayout>
 
 		</StackLayout>
@@ -51,13 +51,13 @@
                Padding="5"
                VerticalOptions="Center"
                WidthRequest="170" HeightRequest="400" HasShadow="True">
-					<VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped2" CommandParameter="Zastave" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center">
 						<Image Source="zastavaicona.png" HeightRequest="250" />
-						<HorizontalStackLayout Spacing="0" HorizontalOptions="Center">
-							<RadioButton x:Name="zastave"
-                                 GroupName="theme"
-                                 IsChecked="{Binding isZastaveSelected, Mode=TwoWay}" />
-							<Label Text="Zastave"
+                        <HorizontalStackLayout Spacing="0" HorizontalOptions="Center">
+                            <Label Text="Zastave"
                            FontSize="18"
                            Padding="-18, 8, 10, 0" />
 						</HorizontalStackLayout>
@@ -72,13 +72,13 @@
                WidthRequest="170"
                HeightRequest="400"
                HasShadow="True">
-					<VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Frame_Tapped2" CommandParameter="Gradovi" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center">
 						<Image Source="glavnigricona.png" HeightRequest="250" />
-						<HorizontalStackLayout HorizontalOptions="Center">
-							<RadioButton x:Name="gradovi"
-                                 GroupName="theme"
-                                 IsChecked="{Binding isGradoviSelected, Mode=TwoWay}" />
-							<Label Text="Glavni gradovi"
+                        <HorizontalStackLayout HorizontalOptions="Center">
+                            <Label Text="Glavni gradovi"
                            FontSize="18"
                            Margin="-18, 9, 25, 0" />
 						</HorizontalStackLayout>
@@ -86,8 +86,9 @@
 				</Frame>
 			</Grid>
 
-			<Button Text="Odaberi"
-            Clicked="Button_Clicked_1"
+			<Button Text="Nazad na početnu"
+            Clicked="Button_Clicked_4" 
+            CommandParameter="zastave"
             BackgroundColor="#123f82"
             TextColor="White"
             FontSize="18"
@@ -109,65 +110,79 @@
                   HorizontalOptions="Center">
 
 						<Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" Padding="10" BackgroundColor="AntiqueWhite" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="evropa1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="Evropa" GroupName="kontinent" IsChecked="{Binding isEvropaSelected, Mode=TwoWay}" Margin="45,-15,0,0"/>
-								<Label Text="Evropa" Margin="39,-15,0,0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Evropa" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="evropa1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Evropa" Margin="39,-15,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="0" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="azija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="Azija" GroupName="kontinent" IsChecked="{Binding isAzijaSelected, Mode=TwoWay}" Margin="45, -15, 0, 0"/>
-								<Label Text="Azija" Margin="45, -15, 0, 0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Azija" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="azija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Azija" Margin="45, -15, 0, 0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" Padding="10" BackgroundColor="AntiqueWhite" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="afrika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="Afrika" GroupName="kontinent" IsChecked="{Binding isAfrikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
-								<Label Text="Afrika" Margin="45,-15,0,0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Afrika" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="afrika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Afrika" Margin="45,-15,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="1" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="australija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="Australija" GroupName="kontinent" IsChecked="{Binding isAustralijaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
-								<Label Text="Australija" Margin="33,-15,0,0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Australija" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="australija1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Australija" Margin="33,-15,0,0"/>
 								<Label Text="i Okeanija" Margin="32, -15,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="2" Grid.Column="0" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="samerika123.png" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center" />
-								<RadioButton x:Name="SAmerika" GroupName="kontinent" IsChecked="{Binding isSAmerikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
-								<Label Text="Sjeverna Amerika" Margin="38,-15,0,0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="SAmerika" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="samerika123.png" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center" />
+                                <Label Text="Sjeverna Amerika" Margin="38,-15,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="2" Grid.Column="1" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="jamerika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="JAmerika" GroupName="kontinent" IsChecked="{Binding isJAmerikaSelected, Mode=TwoWay}" Margin="48,-15,0,0"/>
-								<Label Text="Južna" Margin="48,-20,0,0"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="JAmerika" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="jamerika1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Južna" Margin="48,-20,0,0"/>
 								<Label Text="Amerika" Margin="38,-10,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 
 						<Frame Grid.Row="3" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
-							<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-								<Image Source="svijet1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-								<RadioButton x:Name="Svijet" GroupName="kontinent" IsChecked="{Binding isSvijetSelected, Mode=TwoWay}"/>
-								<Label Text="Svijet"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Svijet" />
+                            </Frame.GestureRecognizers>
+                            <VerticalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Image Source="svijet1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                                <Label Text="Svijet"/>
 							</VerticalStackLayout>
 						</Frame>
 					</Grid>
 
-					<Button BackgroundColor="Aqua" TextColor="Black" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_2" Text="Odaberi"/>
+					<Button BackgroundColor="Aqua" TextColor="Black" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_4" Text="Nazad na početnu" CommandParameter="kontinent"/>
 				</StackLayout>
 			</ScrollView>
 		</StackLayout>

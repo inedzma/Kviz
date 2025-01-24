@@ -11,9 +11,54 @@ namespace Kviz
 	public class MainPageViewModel : INotifyPropertyChanged
 	{
 		public ObservableCollection<Drzava> Drzave { get; set; }
-		
 
-		
+		public void SelectCategory(string category)
+		{
+			// Resetuj sve selekcije
+			isEvropaSelected = false;
+			isAzijaSelected = false;
+			isAfrikaSelected = false;
+			isAustralijaSelected = false;
+			isSAmerikaSelected = false;
+			isJAmerikaSelected = false;
+			isSvijetSelected = false;
+
+			// Postavi selekciju za izabranu kategoriju
+			switch (category)
+			{
+				case "Zastave":
+					isZastaveSelected = true;
+					isGradoviSelected = false;
+					break;
+				case "Gradovi":
+					isGradoviSelected = true;
+					isZastaveSelected = false;
+					break;
+				case "Evropa":
+					isEvropaSelected = true;
+					break;
+				case "Azija":
+					isAzijaSelected = true;
+					break;
+				case "Afrika":
+					isAfrikaSelected = true;
+					break;
+				case "Australija":
+					isAustralijaSelected = true;
+					break;
+				case "SAmerika":
+					isSAmerikaSelected = true;
+					break;
+				case "JAmerika":
+					isJAmerikaSelected = true;
+					break;
+				case "Svijet":
+					isSvijetSelected = true;
+					break;
+			}
+		}
+
+
 
 		private bool _isEvropaSelected;
 		public bool isEvropaSelected
