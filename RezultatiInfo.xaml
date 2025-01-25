@@ -3,6 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="Kviz.RezultatiInfo">
     <TabbedPage.Children>
+
         <!-- Tab za rezultate -->
         <ContentPage Title="Rezultati">
             <StackLayout Padding="20">
