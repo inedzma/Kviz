@@ -4,6 +4,7 @@
 	{
 
 		private MainPageViewModel viewModel;
+		public string Email { get; set; }
 		public MainPage()
 		{
 			InitializeComponent();

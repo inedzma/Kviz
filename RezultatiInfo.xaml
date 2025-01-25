@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="Kviz.RezultatiInfo">
@@ -6,12 +5,18 @@
 
         <!-- Tab za rezultate -->
         <ContentPage Title="Rezultati" >
-            <StackLayout Padding="20" BackgroundColor="AntiqueWhite">
+            <StackLayout Padding="20" BackgroundColor="AntiqueWhite" VerticalOptions="FillAndExpand">
                 <Label Text="Rezultati" FontSize="30" HorizontalOptions="Center" FontFamily="Audiowide-Regular" />
-                <CollectionView ItemsSource="{Binding Rezultati}">
+                
+                <CollectionView ItemsSource="{Binding Rezultati}" VerticalOptions="FillAndExpand">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Label Text="{Binding}" FontSize="20" />
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Zastave" FontSize="20"/>
+                                <Label Text="{Binding Kontinent}" FontSize="20" />
+                                <Label Text="{Binding TacniOdgovori}" FontSize="20" />
+                                <Label Text="{Binding BrojPitanja}" FontSize="20" />
+                            </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

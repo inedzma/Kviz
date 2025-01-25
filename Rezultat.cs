@@ -28,6 +28,9 @@ namespace Kviz
 		[Column("odgovori")]
 		public int TacniOdgovori { get; set; }
 
+		[Column("pitanja")]
+		public int BrojPitanja { get; set; }
+
 		[Column("vrijeme")]
 		public DateTime DatumVrijeme { get; set; }
 	}

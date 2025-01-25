@@ -12,6 +12,9 @@ namespace Kviz
 	{
 		public ObservableCollection<Drzava> Drzave { get; set; }
 
+		private string kontinent;
+
+		public string Korisnik { get; set; }
 		public void SelectCategory(string category)
 		{
 			// Resetuj sve selekcije
@@ -78,6 +81,7 @@ namespace Kviz
 				{
 					_isEvropaSelected = value;
 					OnPropertyChanged(nameof(isEvropaSelected));
+					kontinent = "Evropa";
 					if (value) FiltrirajDrzave("Evropa");
 				}
 			}
@@ -93,6 +97,7 @@ namespace Kviz
 				{
 					_isAzijaSelected = value;
 					OnPropertyChanged(nameof(isAzijaSelected));
+					kontinent = "Azija";
 					if (value) FiltrirajDrzave("Azija"); 
 				}
 			}
@@ -108,6 +113,7 @@ namespace Kviz
 				{
 					_isAfrikaSelected = value;
 					OnPropertyChanged(nameof(isAfrikaSelected));
+					kontinent = "Afrika";
 					if (value) FiltrirajDrzave("Afrika");
 				}
 			}
@@ -123,6 +129,7 @@ namespace Kviz
 				{
 					_isAustralijaSelected = value;
 					OnPropertyChanged(nameof(isAustralijaSelected));
+					kontinent = "Australija i Okeanija";
 					if (value) FiltrirajDrzave("Australija i Okeanija"); 
 				}
 			}
@@ -138,6 +145,7 @@ namespace Kviz
 				{
 					_isSAmerikaSelected = value;
 					OnPropertyChanged(nameof(isSAmerikaSelected));
+					kontinent = "Sjeverna Amerika";
 					if (value) FiltrirajDrzave("Sjeverna Amerika");
 				}
 			}
@@ -153,6 +161,7 @@ namespace Kviz
 				{
 					_isJAmerikaSelected = value;
 					OnPropertyChanged(nameof(isJAmerikaSelected));
+					kontinent = "Južna Amerika";
 					if (value) FiltrirajDrzave("Južna Amerika"); 				}
 			}
 		}
@@ -167,12 +176,13 @@ namespace Kviz
 				{
 					_isSvijetSelected = value;
 					OnPropertyChanged(nameof(isSvijetSelected));
+					kontinent = "Svijet";
 					if (value) FiltrirajDrzave("Svijet"); 
 				}
 			}
 		}
 
-		private int brojPitanja;
+		public int brojPitanja { get; set; }
 		private bool _isSvaSelected;
 		public bool isSvaSelected
 		{
@@ -398,9 +408,24 @@ namespace Kviz
 			else if(_trenutnoPitanjeIndex == brojPitanja-1)
 			{
 				StopQuizEvent?.Invoke(this, EventArgs.Empty);
-				
+				Rezultat rez = new Rezultat()
+				{
+					EmailKorisnika = Korisnik,
+					Kontinent = kontinent,
+					isZastave = isZastaveSelected,
+					TacniOdgovori = TacniOdgovori,
+					BrojPitanja = brojPitanja,
+					DatumVrijeme = DateTime.Now,
+
+				};
+				App._dbService.SaveRezultatAsync(rez);
 			}
 			
+		}
+
+		public void ProslijediEmail(string email)
+		{
+			Korisnik = email;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;

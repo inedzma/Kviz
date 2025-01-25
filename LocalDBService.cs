@@ -86,6 +86,10 @@ namespace Kviz
 			return _connection.Table<Rezultat>().Where(r => r.Kontinent == continent).ToListAsync();
 		}
 
+		public Task<List<Rezultat>> GetRezultateEmail(string email)
+		{
+			return _connection.Table<Rezultat>().Where(r => r.EmailKorisnika == email).ToListAsync();
+		}
 		public Task<int> DeleteRezultatAsync(int id)
 		{
 			return _connection.DeleteAsync<Rezultat>(id);

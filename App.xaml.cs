@@ -3,6 +3,7 @@
 	public partial class App : Application
 	{
 		public static LocalDBService _dbService { get; } = new LocalDBService();
+		public static string Email { get; set; }
 		public App(MainPage mainPage)
 		{
 			InitializeComponent();

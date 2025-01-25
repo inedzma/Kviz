@@ -6,16 +6,11 @@
     <StackLayout>
         <Label 
             Text="Registracija" FontSize="Large"/>
-        <Label Text="Ime:" x:Name="imeLabel"/>
-        <Entry Placeholder="Unesite vaše ime..." x:Name="ime"/>
-        <Label Text="Prezime:" x:Name="prezimeLabel"/>
-        <Entry Placeholder="Unesite vaše prezime..." x:Name="prezime"/>
-        <Label Text="Email:" x:Name="emailLabel"/>
-        <Entry Placeholder="Unesite vašu email adresu..." x:Name="email"/>
-        <Label Text="Lozinka:" x:Name="lozinkaLabel"/>
-        <Entry Placeholder="Unesite vašu lozinku..." x:Name="lozinka"/>
-        <Label Text="Potvrdite lozinku:" x:Name="potvrdiLabel"/>
-        <Entry Placeholder="Potvrdite lozinku" x:Name="potvrdiLozinku"/>
+        <Label Text="Ime:" x:Name="emailLabel"/>
+        <Entry Placeholder="Unesite vaše ime..." x:Name="email"/>
+        <Label Text="Passcode:" x:Name="lozinkaLabel"/>
+        <Entry Placeholder="Unesite vaš passcode..." x:Name="lozinka"/>
+
 
         <Button Text="Registruj se" Clicked="Button_Clicked"/>
     </StackLayout>

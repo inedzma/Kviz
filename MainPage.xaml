@@ -266,7 +266,7 @@
 		<StackLayout IsVisible="False" x:Name="kraj">
 			<Label Text="Kraj kviza. Osvojen broj bodova je:" HorizontalTextAlignment="Center" FontSize="28" FontFamily="Audiowide-Regular" TextColor="BlanchedAlmond" />
 			<Label Text="{Binding TacniOdgovori}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
-            <Label Text="," HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
+            <Label Text="{Binding brojPitanja}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
 			<Button Text="Nazad na početnu" Clicked="Button_Clicked_3" WidthRequest="175" HeightRequest="50" BackgroundColor="#FF9900" BorderColor="#123f82" BorderWidth="1" CornerRadius="25"/>
 		</StackLayout>
 	</StackLayout>

@@ -41,6 +41,7 @@ public partial class LoginPage : ContentPage
 			lozinkaLabel.TextColor = Colors.Red;
 			return;
 		}
+		App.Email = email.Text;
 
 		await Navigation.PushAsync(new MainPage());
 
