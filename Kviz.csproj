@@ -70,11 +70,14 @@
 	  <None Remove="Resources\Images\glavnigricona1.png" />
 	  <None Remove="Resources\Images\globes3.png" />
 	  <None Remove="Resources\Images\jamerika1.png" />
+	  <None Remove="Resources\Images\pobjeda.png" />
 	  <None Remove="Resources\Images\samerika1.png" />
+	  <None Remove="Resources\Images\samerika12.png" />
 	  <None Remove="Resources\Images\samerika123.png" />
 	  <None Remove="Resources\Images\settings1.png" />
 	  <None Remove="Resources\Images\settings12.png" />
 	  <None Remove="Resources\Images\settings123.png" />
+	  <None Remove="Resources\Images\svijet1.png" />
 	  <None Remove="Resources\Images\zastavaicona.png" />
 	  <None Remove="Resources\Images\zastavaicona1.png" />
 	</ItemGroup>
