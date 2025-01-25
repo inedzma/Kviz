@@ -11,13 +11,10 @@
 	</ContentPage.Background>
 
 	<StackLayout VerticalOptions="CenterAndExpand">
-		<StackLayout x:Name="StartPage" IsVisible="True">
-			<Image Source="settings123.png" WidthRequest="25" HeightRequest="25" Margin="0, 20, 10, 0"
-           HorizontalOptions="End"/>
-			<Label Text="Dobrodošli u" FontSize="45" FontAttributes="Bold" FontFamily="Audiowide-Regular" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" TextColor="#132F82"/>
-			<Label Text="GeoQuizz!"  FontFamily="Audiowide-Regular" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="White"/>
+        <StackLayout x:Name="StartPage" IsVisible="True">
+            <Image Source="geoquizz.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-150,0,-150"/>
 
-			<Image Source="globes3.png"
+            <Image Source="globes3.png"
             HeightRequest="450"
            HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
 			<Button Text="Krenimo!" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
@@ -36,15 +33,11 @@
 		</StackLayout>
 
 		<VerticalStackLayout Spacing="20" Padding="20" x:Name="ThemeSelectionPage" IsVisible="False">
-			<Label Text="IZABERI KATEGORIJU"
-           FontSize="28"
-           FontFamily="Audiowide-Regular"
-           HorizontalOptions="Center"
-           FontAttributes="Bold"
-           TextColor="#123F82"/>
+
+            <Image Source="kategorija4.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-150,0,-120"/>
 
 
-			<Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
 				<Frame Grid.Column="0"
                BackgroundColor="#FF9900"
                CornerRadius="10"
@@ -59,7 +52,7 @@
                         <HorizontalStackLayout Spacing="0" HorizontalOptions="Center">
                             <Label Text="Zastave"
                            FontSize="18"
-                           Padding="-18, 8, 10, 0" />
+                           Padding="12, 8, 10, 0" />
 						</HorizontalStackLayout>
 					</VerticalStackLayout>
 				</Frame>
@@ -80,7 +73,7 @@
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <Label Text="Glavni gradovi"
                            FontSize="18"
-                           Margin="-18, 9, 25, 0" />
+                           Margin="20, 9, 25, 0" />
 						</HorizontalStackLayout>
 					</VerticalStackLayout>
 				</Frame>
@@ -102,8 +95,8 @@
 		<StackLayout x:Name="ContinentSelectionPage" IsVisible="False" VerticalOptions="FillAndExpand">
 			<ScrollView VerticalOptions="FillAndExpand" Orientation="Vertical">
 				<StackLayout  Orientation="Vertical">
-					<Label Text="Izaberi kontinent" FontFamily="Audiowide-Regular" FontSize="30" Margin="10, 0, 10, 0" HorizontalOptions="Center" FontAttributes="Bold"/>
-					<Grid ColumnDefinitions="*,*"
+                    <Image Source="kontinent4.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-100,0,-120"/>
+                    <Grid ColumnDefinitions="*,*"
                   RowDefinitions="auto, auto, auto, auto"
                   ColumnSpacing="20"
                   RowSpacing="20"
@@ -155,7 +148,7 @@
                                 <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="SAmerika" />
                             </Frame.GestureRecognizers>
                             <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-                                <Image Source="samerika123.png" HeightRequest="100" WidthRequest="50" HorizontalOptions="Center" />
+                                <Image Source="samerika12.png" HeightRequest="100" HorizontalOptions="Center" />
                                 <Label Text="Sjeverna Amerika" Margin="38,-15,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
@@ -171,61 +164,110 @@
 							</VerticalStackLayout>
 						</Frame>
 
-						<Frame Grid.Row="3" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="150" HeightRequest="200">
+						<Frame Grid.Row="3" Padding="10" BackgroundColor="AntiqueWhite" CornerRadius="10" WidthRequest="340" HeightRequest="170" Margin="190,0,0,0">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped" CommandParameter="Svijet" />
                             </Frame.GestureRecognizers>
                             <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-                                <Image Source="svijet1.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
-                                <Label Text="Svijet"/>
+                                <Image Source="svijet1.png" HeightRequest="85" HorizontalOptions="Center" />
+                                <Label Text="Svijet" Margin="140,-5,0,0"/>
 							</VerticalStackLayout>
 						</Frame>
 					</Grid>
 
-					<Button BackgroundColor="Aqua" TextColor="Black" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_4" Text="Nazad na početnu" CommandParameter="kontinent"/>
-				</StackLayout>
+                    <Button BackgroundColor="#123f82" TextColor="white" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked_4" Text="Nazad na početnu" CommandParameter="kontinent" Margin="0,15,0,20"/>
+                </StackLayout>
 			</ScrollView>
 		</StackLayout>
 
 
 
 
-		<VerticalStackLayout x:Name="FormatSelectionPage" IsVisible="False">
-			<Label Text="Izaberi temu" FontSize="Large" HorizontalOptions="Center" FontAttributes="Bold"/>
-			<StackLayout Orientation="Horizontal">
-				<RadioButton x:Name="pitanja" GroupName="format" IsChecked="{Binding is10Selected, Mode=TwoWay}"/>
-				<Label Text="10 pitanja"/>
-			</StackLayout>
-			<StackLayout Orientation="Horizontal">
-				<RadioButton x:Name="sva" GroupName="format" IsChecked="{Binding isSvaSelected, Mode=TwoWay}"/>
-				<Label Text="Sva pitanja"/>
-			</StackLayout>
-			<Button Command="{Binding ZapocniKvizCommand}"  Text="Zapocni kviz"/>
-		</VerticalStackLayout>
+        <VerticalStackLayout x:Name="FormatSelectionPage" IsVisible="False" Padding="10" Spacing="20" HorizontalOptions="Center">
+            <Image Source="pitanje4.png" Margin="0,-150,0,-120"/>
+            <Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
+                <Frame Grid.Column="0"
+               BackgroundColor="#FF9900"
+               CornerRadius="10"
+               Padding="10"
+               VerticalOptions="Center"
+               WidthRequest="170"
+               HeightRequest="400"
+               HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer CommandParameter="10Pitanja" Tapped="Frame_Tapped3"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="deset.png" HeightRequest="140" WidthRequest="100" HorizontalOptions="Center" />
+                        <Label Text="10 pitanja"
+                       FontSize="25"
+                      TextColor="#123f82"
+                       HorizontalOptions="Center"
+                               FontFamily="AntonSC-Regular"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+
+                <Frame Grid.Column="1"
+               BackgroundColor="#00BFFF"
+               CornerRadius="10"
+               Padding="10"
+               VerticalOptions="Center"
+               WidthRequest="170"
+               HeightRequest="400"
+               HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer CommandParameter="SvaPitanja" Tapped="Frame_Tapped3"/>
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image Source="upitnik1.png" HeightRequest="150" WidthRequest="100" HorizontalOptions="Center" />
+                        <Label Text="Sva pitanja"
+                       FontSize="25"
+                       TextColor="#123f82"
+                       HorizontalOptions="Center"
+                               FontFamily="AntonSC-Regular"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+
+            <Button Clicked="Button_Clicked_5" 
+            Text="Vrati nazad"
+            BackgroundColor="#123f82"
+            TextColor="White"
+            FontSize="18"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            HorizontalOptions="Center"
+            HeightRequest="50"
+            WidthRequest="200"/>
+        </VerticalStackLayout>
 
 
 
-		<StackLayout IsVisible="False" x:Name="pitanje">
 
-			<Label x:Name="pitanjeLabel" FontSize="Large" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}"/>
-			<Label  FontSize="Large" Text="Koji je glavni grad države: " IsVisible="{Binding isGradoviSelected}"/>
+        <StackLayout IsVisible="False" x:Name="pitanje">
 
-			<Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}"/>
-			<Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="50" IsVisible="{Binding isGradoviSelected}"/>
+            <Label x:Name="pitanjeLabel" Text="Ovo je zastava koje države?" IsVisible="{Binding isZastaveSelected}" FontFamily="Audiowide-Regular" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,15" FontAttributes="Bold" TextColor="#123f82"/>
+            <Label Text="Koji je glavni grad države:" IsVisible="{Binding isGradoviSelected}" FontFamily="Audiowide-Regular" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+			<Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}" Margin="0,0,0,20"/>
+			<Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="40" IsVisible="{Binding isGradoviSelected}" FontFamily="AntonSC-Regular" FontAttributes="None" TextColor="#123f82"/>
 
 			<CollectionView ItemsSource="{Binding odgovori}">
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
-						<Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}"/>
+						<Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}" Margin="0,0,0,8" WidthRequest="250" HeightRequest="50" Background="#FF9900" BorderColor="#123f82" BorderWidth="1" TextColor="AntiqueWhite" TextTransform="Uppercase" FontAttributes="Bold"/>
 					</DataTemplate>
 				</CollectionView.ItemTemplate>
 			</CollectionView>
 		</StackLayout>
 
 		<StackLayout IsVisible="False" x:Name="kraj">
-			<Label Text="Kraj kviza"/>
-			<Label Text="{Binding TacniOdgovori}"/>
-			<Button Text="Nazad na početnu" Clicked="Button_Clicked_3"/>
+			<Label Text="Kraj kviza. Osvojen broj bodova je:" HorizontalTextAlignment="Center" FontSize="28" FontFamily="Audiowide-Regular" TextColor="BlanchedAlmond" />
+			<Label Text="{Binding TacniOdgovori}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
+            <Label Text="," HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
+			<Button Text="Nazad na početnu" Clicked="Button_Clicked_3" WidthRequest="175" HeightRequest="50" BackgroundColor="#FF9900" BorderColor="#123f82" BorderWidth="1" CornerRadius="25"/>
 		</StackLayout>
 	</StackLayout>
 

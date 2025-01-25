@@ -4,9 +4,9 @@
             x:Class="Kviz.RezultatiInfo">
     <TabbedPage.Children>
         <!-- Tab za rezultate -->
-        <ContentPage Title="Rezultati">
-            <StackLayout Padding="20">
-                <Label Text="Rezultati" FontSize="30" HorizontalOptions="Center" />
+        <ContentPage Title="Rezultati" >
+            <StackLayout Padding="20" BackgroundColor="AntiqueWhite">
+                <Label Text="Rezultati" FontSize="30" HorizontalOptions="Center" FontFamily="Audiowide-Regular" />
                 <CollectionView ItemsSource="{Binding Rezultati}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -20,18 +20,18 @@
 
         <!-- Tab za informacije -->
         <ContentPage Title="Info">
-            <StackLayout Padding="20">
-                <Label Text="O ideji aplikacije" FontSize="30" HorizontalOptions="Center" />
-                <Label Text="Aplikacija GeoQuiz nastala je iz naše zajedničke ljubavi prema geografiji i želje da pružimo korisnicima zabavan i edukativan način da prošire svoje znanje o državama, gradovima i kontinentima. Naš cilj bio je kreirati kviz koji je podjednako koristan i izazovan, te da motiviše korisnike da nauče više o svijetu." FontSize="15" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Padding="20" BackgroundColor="LightBlue">
+                <Label Text="*O ideji aplikacije*" FontSize="30" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Audiowide-Regular"/>
+                <Label Text="Aplikacija GeoQuiz nastala je iz naše zajedničke ljubavi prema geografiji i želje da pružimo korisnicima zabavan i edukativan način da prošire svoje znanje o državama, gradovima i kontinentima. Naš cilj bio je kreirati kviz koji je podjednako koristan i izazovan, te da motiviše korisnike da nauče više o svijetu." FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="*O projektu*" FontSize="30" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Audiowide-Regular"/>
+                <Label Text="Aplikaciju su razvile Nedžma Imović i Merjem Grizić. Rad na projektu započele smo kao dio kursa Razvoj mobilnih aplikacija (RMA), s fokusom na jednostavan i intuitivan dizajn koji omogućava korisnicima lak pristup sadržaju. GeoQuiz je razvijen koristeći C# i .NET MAUI tehnologije." FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
                 <Label Text="" HorizontalOptions="Center" />
-                <Label Text="O projektu" FontSize="30" HorizontalOptions="Center" />
-                <Label Text="Aplikaciju su razvile Nedžma Imović i Merjem Grizić. Rad na projektu započele smo kao dio kursa Razvoj mobilnih aplikacija (RMA), s fokusom na jednostavan i intuitivan dizajn koji omogućava korisnicima lak pristup sadržaju. GeoQuiz je razvijen koristeći C# i .NET MAUI tehnologije." FontSize="15" HorizontalOptions="CenterAndExpand"/>
-                <Label Text="" HorizontalOptions="Center" />
-                <Label Text="Kontakt za dodatne" FontSize="30" HorizontalOptions="Center" />
-                <Label Text="informacije" FontSize="30" HorizontalOptions="Center" />
-                <Label Text="Ukoliko imate pitanja ili želite saznati više o aplikaciji, slobodno nas kontaktirajte putem LinkedIn profila:" FontSize="15" HorizontalOptions="CenterAndExpand"/>
-                <Label Text="Nedžma Imamović" FontSize="15" HorizontalOptions="CenterAndExpand"/>
-                <Label Text="Merjem Grizić" FontSize="15" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="*Kontakt za dodatne" FontSize="30" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Audiowide-Regular"/>
+                <Label Text="informacije*" FontSize="30" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontAttributes="Bold" FontFamily="Audiowide-Regular"/>
+                <Label Text="Ukoliko imate pitanja ili želite saznati više o aplikaciji, slobodno nas kontaktirajte putem LinkedIn profila:" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="Nedžma Imamović" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                <Label Text="Merjem Grizić" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
             </StackLayout>
         </ContentPage>
     </TabbedPage.Children>

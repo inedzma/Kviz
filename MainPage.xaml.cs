@@ -63,8 +63,16 @@
 			StartPage.IsVisible=true;
 			
 		}
+        private void Button_Clicked_5(object sender, EventArgs e)
+        {
 
-		private void Frame_Tapped(object sender, EventArgs e)
+			FormatSelectionPage.IsVisible = false;
+			ContinentSelectionPage.IsVisible = true;
+
+
+        }
+
+        private void Frame_Tapped(object sender, EventArgs e)
 		{
 			if (sender is Frame frame && frame.BindingContext is MainPageViewModel viewModel)
 			{
@@ -80,7 +88,26 @@
 			}
 		}
 
-		private void Frame_Tapped2(object sender, EventArgs e)
+        private void Frame_Tapped3(object sender, EventArgs e)
+        {
+            if (sender is Frame frame && frame.BindingContext is MainPageViewModel viewModel)
+            {
+                // Dohvati prosleđeni CommandParameter (kategoriju)
+                var tapGestureRecognizer = (TapGestureRecognizer)frame.GestureRecognizers[0];
+                var category = tapGestureRecognizer.CommandParameter.ToString();
+
+                // Odaberi kategoriju
+                viewModel.SelectCategory(category);
+
+                // Pozovi funkcionalnost dugmeta
+                OnStartQuiz(sender, e);
+
+				viewModel.ZapocniKviz();
+            }
+        }
+
+
+        private void Frame_Tapped2(object sender, EventArgs e)
 		{
 			if (sender is Frame frame && frame.BindingContext is MainPageViewModel viewModel)
 			{
@@ -134,3 +161,5 @@
 	}
 
 }
+
+

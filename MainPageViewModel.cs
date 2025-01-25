@@ -22,6 +22,8 @@ namespace Kviz
 			isSAmerikaSelected = false;
 			isJAmerikaSelected = false;
 			isSvijetSelected = false;
+			is10Selected = false;
+			isSvaSelected = false;
 
 			// Postavi selekciju za izabranu kategoriju
 			switch (category)
@@ -54,6 +56,12 @@ namespace Kviz
 					break;
 				case "Svijet":
 					isSvijetSelected = true;
+					break;
+				case "10Pitanja":
+					is10Selected = true;
+					break;
+				case "SvaPitanja":
+					isSvaSelected = true;
 					break;
 			}
 		}
