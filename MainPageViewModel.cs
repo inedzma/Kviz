@@ -389,9 +389,13 @@ namespace Kviz
 			
 		}
 
+		public event Action<string, bool> AnswerCheckedEvent;
 		public void SljedecePitanje(object parameter)
 		{
-			if (TacanOdgovor == parameter.ToString())
+			bool isCorrect = TacanOdgovor == parameter.ToString();
+
+			AnswerCheckedEvent?.Invoke(parameter.ToString(), isCorrect);
+			if (isCorrect)
 			{
 				TacniOdgovori++;
 				Console.WriteLine(TacniOdgovori);
@@ -433,6 +437,8 @@ namespace Kviz
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
+
+
 
 	}
 }

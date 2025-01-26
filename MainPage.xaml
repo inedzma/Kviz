@@ -257,7 +257,7 @@
 			<CollectionView ItemsSource="{Binding odgovori}">
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
-						<Button Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}" Margin="0,0,0,8" WidthRequest="250" HeightRequest="50" Background="#FF9900" BorderColor="#123f82" BorderWidth="1" TextColor="AntiqueWhite" TextTransform="Uppercase" FontAttributes="Bold"/>
+						<Button x:Name="pitanjeButton" Text="{Binding}" Command="{Binding BindingContext.SljedecePitanjeCommand, Source={x:Reference pitanje}}" CommandParameter="{Binding}" Margin="0,0,0,8" WidthRequest="250" HeightRequest="50" Background="#FF9900" BorderColor="#123f82" BorderWidth="1" TextColor="AntiqueWhite" TextTransform="Uppercase" FontAttributes="Bold"/>
 					</DataTemplate>
 				</CollectionView.ItemTemplate>
 			</CollectionView>

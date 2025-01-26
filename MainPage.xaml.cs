@@ -14,6 +14,8 @@
 			viewModel.StartQuizEvent += OnStartQuiz;
 			viewModel.StopQuizEvent += OnStopQuiz;
 
+			viewModel.AnswerCheckedEvent += OnAnswerChecked;
+
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
@@ -158,6 +160,29 @@
 		}
 
 
+		private void OnAnswerChecked(string answer, bool isCorrect)
+		{
+			// Iteriraj kroz dugmad u CollectionView
+			foreach (var child in pitanje.Children)
+			{
+				if (child is Button button && button.Text == answer)
+				{
+					// Postavi boju na osnovu tačnosti
+					button.BackgroundColor = isCorrect ? Colors.Green : Colors.Red;
+
+					// Opcionalno: Vrati boju nakon 2 sekunde
+					Task.Delay(2000).ContinueWith(_ =>
+					{
+						MainThread.BeginInvokeOnMainThread(() =>
+						{
+							button.BackgroundColor = Colors.Transparent; // Ili vrati na inicijalnu boju
+						});
+					});
+
+					break; // Prekini petlju jer je dugme pronađeno
+				}
+			}
+		}
 
 	}
 

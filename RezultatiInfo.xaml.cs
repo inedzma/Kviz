@@ -2,7 +2,7 @@
 
 namespace Kviz;
 
-public partial class RezultatiInfo : TabbedPage
+public partial class RezultatiInfo
 {
 	private readonly LocalDBService dBService;
 	public ObservableCollection<Rezultat> Rezultati { get; set; }
@@ -18,21 +18,28 @@ public partial class RezultatiInfo : TabbedPage
 		// Prebaci na odgovarajući tab
 		if (initialTab == "Info")
 		{
-			CurrentPage = Children[1]; // Info tab
+			RezultatiSection.IsVisible = false;
+			InfoSection.IsVisible = true;
 		}
 		else
 		{
-			CurrentPage = Children[0]; // Rezultati tab
+			InfoSection.IsVisible = false;
+			RezultatiSection.IsVisible = true; // Rezultati tab
 		}
+		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	private async Task UcitajRezultate()
 	{
 		var rezultati = await dBService.GetRezultateEmail(Email);
 		Rezultati.Clear();
-		foreach(var r in rezultati)
+		for(int r = rezultati.Count()-1; r>=0; r--)
 		{
-			Rezultati.Add(r);
-			Console.WriteLine("Dodano", r.TacniOdgovori);
+			Rezultati.Add(rezultati[r]);
 		}
+	}
+
+	private async void Button_Clicked(object sender, EventArgs e)
+	{
+		await Navigation.PopAsync();
 	}
 }
