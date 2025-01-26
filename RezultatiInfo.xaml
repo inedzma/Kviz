@@ -3,43 +3,67 @@
              x:Class="Kviz.RezultatiInfo"
              BackgroundColor="White">
 
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FF9900" Offset="0.0" />
+            <GradientStop Color="#00BFFF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <StackLayout VerticalOptions="FillAndExpand">
-        <!-- Rezultati Section -->
-        <StackLayout>
-            <Button Text="&lt;--" Clicked="Button_Clicked"/>
-        </StackLayout>
+
         <ScrollView x:Name="RezultatiSection" IsVisible="True" VerticalOptions="FillAndExpand">
-            <StackLayout Padding="20" BackgroundColor="AntiqueWhite" VerticalOptions="FillAndExpand">
-                <Label Text="Rezultati" FontSize="30" HorizontalOptions="Center" FontFamily="Audiowide-Regular" />
+            <StackLayout Padding="20" VerticalOptions="FillAndExpand">
+                <Image Source="rezultati.png"/>
+
+                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" Margin="0,0,0,10">
+                    <Label Text="Datum" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Margin="-15,0,0,0"/>
+                    <Label Text="Kategorija" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
+                    <Label Text="Kontinent" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" />
+                    <Label Text="Rezultat" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" />
+                </Grid>
 
                 <CollectionView ItemsSource="{Binding Rezultati}" VerticalOptions="FillAndExpand">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Orientation="Vertical">
-                                <Label Text="Zastave" FontSize="20">
-                                    <Label.Triggers>
-                                        <DataTrigger TargetType="Label" Binding="{Binding isZastave}" Value="False">
-                                            <Setter Property="IsVisible" Value="False" />
-                                        </DataTrigger>
-                                    </Label.Triggers>
-                                </Label>
-                                <Label Text="Glavni gradovi" FontSize="20">
-                                    <Label.Triggers>
-                                        <DataTrigger TargetType="Label" Binding="{Binding isZastave}" Value="True">
-                                            <Setter Property="IsVisible" Value="False" />
-                                        </DataTrigger>
-                                    </Label.Triggers>
-                                </Label>
-                                <Label Text="{Binding Kontinent}" FontSize="20" />
-                                <Label Text="{Binding TacniOdgovori}" FontSize="20" />
-                                <Label Text="{Binding BrojPitanja}" FontSize="20" />
-                                <Label Text="{Binding DatumVrijeme, StringFormat='{0:dd.MM}'}" FontSize="20"/>
-                            </StackLayout>
+
+                            <Frame CornerRadius="10" BorderColor="#123f82"  Padding="10" Margin="0,0,0,10" HasShadow="True" BackgroundColor="#99FFA500">
+                                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto">
+
+                                    <Label Text="{Binding DatumVrijeme, StringFormat='{0:dd.MM}'}" FontSize="20" Grid.Column="0" HorizontalTextAlignment="Center" Margin="-15,0,0,0"/>
+
+                                    <Label Text="Zastave" FontSize="20" Grid.Column="1">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding isZastave}" Value="False">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <Label Text="Capital" FontSize="20" Grid.Column="1">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding isZastave}" Value="True">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+
+                                    <Label Text="{Binding Kontinent}" FontSize="20" Grid.Column="2" HorizontalTextAlignment="Center" />
+ 
+                                    <HorizontalStackLayout Spacing="2" Grid.Column="3" HorizontalOptions="Center" Margin="0,0,-15,0">
+                                        <Label Text="{Binding TacniOdgovori}" FontSize="20" />
+                                        <Label Text="/" FontSize="20" />
+                                        <Label Text="{Binding BrojPitanja}" FontSize="20" />
+                                    </HorizontalStackLayout>
+                                </Grid>
+                            </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
+                <Button BackgroundColor="#123f82" TextColor="white" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Clicked="Button_Clicked" Text="POČETNA" CommandParameter="kontinent" Margin="0,15,0,20"/>
             </StackLayout>
         </ScrollView>
+
+
 
         <!-- Info Section -->
         <ScrollView x:Name="InfoSection" IsVisible="False">

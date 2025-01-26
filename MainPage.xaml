@@ -12,7 +12,7 @@
 
 	<StackLayout VerticalOptions="CenterAndExpand">
         <StackLayout x:Name="StartPage" IsVisible="True">
-            <Image Source="geoquizz.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-150,0,-150"/>
+            <Image Source="geoquizz6.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,0,0,0"/>
 
             <Image Source="globes3.png"
             HeightRequest="450"
@@ -34,7 +34,7 @@
 
 		<VerticalStackLayout Spacing="20" Padding="20" x:Name="ThemeSelectionPage" IsVisible="False">
 
-            <Image Source="kategorija4.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-150,0,-120"/>
+            <Image Source="kategorija5.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-150,0,-120"/>
 
 
             <Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
@@ -95,7 +95,7 @@
 		<StackLayout x:Name="ContinentSelectionPage" IsVisible="False" VerticalOptions="FillAndExpand">
 			<ScrollView VerticalOptions="FillAndExpand" Orientation="Vertical">
 				<StackLayout  Orientation="Vertical">
-                    <Image Source="kontinent4.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-100,0,-120"/>
+                    <Image Source="kontinent5.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,-100,0,-120"/>
                     <Grid ColumnDefinitions="*,*"
                   RowDefinitions="auto, auto, auto, auto"
                   ColumnSpacing="20"
@@ -184,7 +184,7 @@
 
 
         <VerticalStackLayout x:Name="FormatSelectionPage" IsVisible="False" Padding="10" Spacing="20" HorizontalOptions="Center">
-            <Image Source="pitanje4.png" Margin="0,-150,0,-120"/>
+            <Image Source="pitanje5.png" Margin="0,-150,0,-120"/>
             <Grid ColumnDefinitions="*,*" RowDefinitions="auto" ColumnSpacing="20" RowSpacing="20" HorizontalOptions="Center">
                 <Frame Grid.Column="0"
                BackgroundColor="#FF9900"
@@ -252,7 +252,7 @@
             <Label Text="Koji je glavni grad države:" IsVisible="{Binding isGradoviSelected}" FontFamily="Audiowide-Regular" FontSize="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
 
 			<Image Source="{Binding TrenutnoPitanje.Zastava}" IsVisible="{Binding isZastaveSelected}" Margin="0,0,0,20"/>
-			<Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="40" IsVisible="{Binding isGradoviSelected}" FontFamily="AntonSC-Regular" FontAttributes="None" TextColor="#123f82"/>
+			<Label Text="{Binding TrenutnoPitanje.Naziv}" FontSize="40" IsVisible="{Binding isGradoviSelected}" FontFamily="AntonSC-Regular" FontAttributes="None" TextColor="#123f82" HorizontalOptions="Center" Margin="0,0,0,10"/>
 
 			<CollectionView ItemsSource="{Binding odgovori}">
 				<CollectionView.ItemTemplate>
@@ -264,10 +264,10 @@
 		</StackLayout>
 
 		<StackLayout IsVisible="False" x:Name="kraj">
-			<Label Text="Kraj kviza. Osvojen broj bodova je:" HorizontalTextAlignment="Center" FontSize="28" FontFamily="Audiowide-Regular" TextColor="BlanchedAlmond" />
-			<Label Text="{Binding TacniOdgovori}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
-            <Label Text="{Binding brojPitanja}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
-			<Button Text="Nazad na početnu" Clicked="Button_Clicked_3" WidthRequest="175" HeightRequest="50" BackgroundColor="#FF9900" BorderColor="#123f82" BorderWidth="1" CornerRadius="25"/>
+            <Image Source="cestitke.png"/>
+            <Label Text="Kraj kviza. Osvojen broj bodova je:" HorizontalTextAlignment="Center" FontSize="28" FontFamily="Audiowide-Regular" TextColor="BlanchedAlmond" />
+            <Label Text="{Binding TacniOdgovori}" HorizontalTextAlignment="Center" TextColor="#123f82" FontSize="75" FontFamily="Audiowide-Rgular" FontAttributes="Bold"/>
+            <Button Text="Nazad na početnu" Clicked="Button_Clicked_3" WidthRequest="175" HeightRequest="50" BackgroundColor="#FF9900" BorderColor="#123f82" BorderWidth="1" CornerRadius="25"/>
 		</StackLayout>
 	</StackLayout>
 
