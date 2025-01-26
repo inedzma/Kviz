@@ -2,16 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Kviz.LoginPage"
-             Title="LoginPage">
-    <StackLayout>
-        <Label 
-        Text="Prijava" FontSize="Large"/>
-        <Label Text="Ime:" x:Name="emailLabel"/>
-        <Entry Placeholder="Unesite vaše ime..." x:Name="email"/>
-        <Label Text="Passcode:" x:Name="lozinkaLabel"/>
-        <Entry Placeholder="Unesite vaš passcode..." x:Name="lozinka"/>
+    >
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FF9900" Offset="0.0" />
+            <GradientStop Color="#00BFFF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <StackLayout VerticalOptions="Center">
+        <Image Source="prijava.png" Margin="0,0,0,40"/>
+        <Label Text="Ime:" x:Name="emailLabel" FontSize="20" Margin="15,0,0,0" FontFamily="Oswald-VariableFont_wght" FontAttributes="Bold"/>
+        <Entry Placeholder="Unesite vaše ime..." x:Name="email" WidthRequest="380"  PlaceholderColor="Black" TextColor="Black"/>
+        <Label Text="Passcode:" x:Name="lozinkaLabel" FontSize="20" Margin="15,0,0,0" FontFamily="Oswald-VariableFont_wght" FontAttributes="Bold"/>
+        <Entry Placeholder="Unesite vaš passcode..." x:Name="lozinka" TextColor="Black" WidthRequest="380" PlaceholderColor="Black" />
 
-        <Button Text="Prijavi se" Clicked="Button_Clicked"/>
-        <Button Text="Registruj se" Clicked="Button_Clicked_1"/>
+        <Button Text="Prijavi se" Clicked="Button_Clicked" BackgroundColor="#123f82" TextColor="white" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Margin="0,40,0,0"/>
+        <Button Text="Registruj se" Clicked="Button_Clicked_1" BackgroundColor="#123f82" TextColor="white" FontSize="18" CornerRadius="10" HorizontalOptions="Center" WidthRequest="200" HeightRequest="50" FontAttributes="Bold" Margin="0,10,0,10"/>
+        <Label Text="U koliko nisi prijavljen, uradi registraciju!" HorizontalOptions="Center" FontAttributes="Italic" FontSize="10"/>
     </StackLayout>
 </ContentPage>

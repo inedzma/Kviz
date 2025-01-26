@@ -9,7 +9,9 @@ public partial class LoginPage : ContentPage
 		InitializeComponent();
 
 		Task.Run(async () => await App._dbService.LoadUsersFromJsonAsync());
-	}
+
+        NavigationPage.SetHasNavigationBar(this, false);
+    }
 
 	private async void Button_Clicked(object sender, EventArgs e)
 	{

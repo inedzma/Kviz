@@ -62,6 +62,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\AntonSC-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Audiowide-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Oswald-VariableFont_wght.ttf" />
 	  <None Remove="Resources\Images\afrika1.png" />
 	  <None Remove="Resources\Images\australija1.png" />
 	  <None Remove="Resources\Images\azija1.png" />
@@ -71,12 +72,19 @@
 	  <None Remove="Resources\Images\geoquizz6.png" />
 	  <None Remove="Resources\Images\glavnigricona.png" />
 	  <None Remove="Resources\Images\glavnigricona1.png" />
+	  <None Remove="Resources\Images\glgraddrzave.png" />
 	  <None Remove="Resources\Images\globes3.png" />
+	  <None Remove="Resources\Images\ideja.png" />
 	  <None Remove="Resources\Images\jamerika1.png" />
 	  <None Remove="Resources\Images\kategorija5.png" />
+	  <None Remove="Resources\Images\kontaktinfo.png" />
 	  <None Remove="Resources\Images\kontinent5.png" />
+	  <None Remove="Resources\Images\oprojektu.png" />
 	  <None Remove="Resources\Images\pitanje5.png" />
 	  <None Remove="Resources\Images\pobjeda.png" />
+	  <None Remove="Resources\Images\prijava.png" />
+	  <None Remove="Resources\Images\registracija.png" />
+	  <None Remove="Resources\Images\registracija1.png" />
 	  <None Remove="Resources\Images\rezultati.png" />
 	  <None Remove="Resources\Images\samerika1.png" />
 	  <None Remove="Resources\Images\samerika12.png" />
@@ -85,6 +93,7 @@
 	  <None Remove="Resources\Images\settings12.png" />
 	  <None Remove="Resources\Images\settings123.png" />
 	  <None Remove="Resources\Images\svijet1.png" />
+	  <None Remove="Resources\Images\zastavadrzave.png" />
 	  <None Remove="Resources\Images\zastavaicona.png" />
 	  <None Remove="Resources\Images\zastavaicona1.png" />
 	</ItemGroup>

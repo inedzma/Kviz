@@ -9,7 +9,9 @@ public partial class RegistrationPage : ContentPage
 	{
 		_dbService = App._dbService;
 		InitializeComponent();
-	}
+
+        NavigationPage.SetHasNavigationBar(this, false);
+    }
 
 	private async void Button_Clicked(object sender, EventArgs e)
 	{
@@ -52,5 +54,9 @@ public partial class RegistrationPage : ContentPage
 
 		await Navigation.PushAsync(new MainPage());
 		
+	}
+    private async void Button_Clicked2(object sender, EventArgs e)
+	{
+		await Navigation.PopAsync();
 	}
 }
