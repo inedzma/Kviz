@@ -17,10 +17,10 @@
                 <Image Source="rezultati.png"/>
 
                 <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" Margin="0,0,0,10">
-                    <Label Text="Datum" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Margin="-15,0,0,0"/>
-                    <Label Text="Kategorija" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="Kontinent" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" />
-                    <Label Text="Rezultat" FontSize="15" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" />
+                    <Label Text="Datum" FontSize="20" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Margin="-15,0,0,0" FontFamily="Oswald-VariableFont_wght"/>
+                    <Label Text="Kategorija" FontSize="20" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght"/>
+                    <Label Text="Kontinent" FontSize="20" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght"/>
+                    <Label Text="Rezultat" FontSize="20" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght"/>
                 </Grid>
 
                 <CollectionView ItemsSource="{Binding Rezultati}" VerticalOptions="FillAndExpand">
@@ -69,22 +69,24 @@
         <ScrollView x:Name="InfoSection" IsVisible="False">
             <StackLayout Padding="20">
 
-                <Image Source="ideja.png"/>
+                <Image Source="ideja.png" HeightRequest="150"/>
 
                 <Label Text="Aplikacija GeoQuiz nastala je iz naše zajedničke ljubavi prema geografiji i želje da pružimo korisnicima zabavan i edukativan način da prošire svoje znanje o državama, gradovima i kontinentima. Naš cilj bio je kreirati kviz koji je podjednako koristan i izazovan, te da motiviše korisnike da nauče više o svijetu."
-                       FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                       FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght" />
 
-                <Image Source="oprojektu.png"/>
+                <Image Source="oprojektu.png" HeightRequest="80"/>
 
 
                 <Label Text="Aplikaciju su razvile Nedžma Imović i Merjem Grizić. Rad na projektu započele smo kao dio kursa Razvoj mobilnih aplikacija (RMA), s fokusom na jednostavan i intuitivan dizajn koji omogućava korisnicima lak pristup sadržaju. GeoQuiz je razvijen koristeći C# i .NET MAUI tehnologije."
-                       FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                       FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght" />
 
-                <Image Source="kontaktinfo.png"/>
+                <Image Source="kontaktinfo.png" HeightRequest="80"/>
 
-                <Label Text="Ukoliko imate pitanja ili želite saznati više o aplikaciji, slobodno nas kontaktirajte putem LinkedIn profila:" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
-                <Label Text="Nedžma Imamović" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
-                <Label Text="Merjem Grizić" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                <Label Text="Ukoliko imate pitanja ili želite saznati više o aplikaciji, slobodno nas kontaktirajte putem LinkedIn profila:" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght"/>
+                <Label Text="Nedžma Imamović" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  FontFamily="Oswald-VariableFont_wght"/>
+                <Label Text="Merjem Grizić" FontSize="15" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="Oswald-VariableFont_wght"/>
+
+                <Label Text="PTF-RMA-2024/25" HorizontalOptions="Center" Margin="0,80,0,0"/>
             </StackLayout>
         </ScrollView>
     </StackLayout>
